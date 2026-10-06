@@ -1,6 +1,7 @@
 import "server-only";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
+import { API_BASE_URL as API_URL } from "./api-config";
 import type {
   Book,
   BookCategory,
@@ -12,8 +13,6 @@ import type {
   Service,
   SiteData,
 } from "./types";
-
-const API_URL = (process.env.API_URL ?? "http://127.0.0.1:8291/api/v1").replace(/\/$/, "");
 
 /** Content is cached for an hour and purged on demand by the CMS via tags. */
 const REVALIDATE_SECONDS = 3600;

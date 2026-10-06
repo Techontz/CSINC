@@ -37,7 +37,7 @@ php artisan serve --host=127.0.0.1 --port=8291
 
 # Frontend
 cd ../frontend
-cp .env.example .env.local      # API_URL, NEXT_PUBLIC_SITE_URL, REVALIDATE_SECRET (= backend FRONTEND_REVALIDATE_SECRET)
+cp .env.example .env.local      # NEXT_PUBLIC_API_URL, NEXT_PUBLIC_SITE_URL, REVALIDATE_SECRET (= backend FRONTEND_REVALIDATE_SECRET)
 npm install
 npm run dev
 ```
@@ -64,14 +64,15 @@ Backend (`backend/.env`):
 - `STRIPE_SECRET` and `STRIPE_WEBHOOK_SECRET`. In Stripe, add a webhook endpoint `https://api.your-domain/api/v1/stripe/webhook` for `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`, `checkout.session.expired` and `charge.refunded`.
 - `QUEUE_CONNECTION=database` plus a worker (`php artisan queue:work`) so notifications and revalidation run in the background.
 - `TRUSTED_PROXIES` set to the Next.js server’s IP so rate limits apply per visitor.
+- `CORS_ALLOWED_ORIGINS=https://csinc91.com,https://www.csinc91.com` (defaults to `FRONTEND_URL`). The website calls the API from its server, so no cookies or credentials are shared cross-origin.
 - `php artisan optimize && php artisan filament:optimize`. Remove `SEED_ADMIN_PASSWORD` after the first deploy.
 
-Frontend (`frontend/.env.production`): `API_URL`, `NEXT_PUBLIC_SITE_URL=https://www.your-domain`, `REVALIDATE_SECRET`. Leave `NEXT_IMAGE_ALLOW_LOCAL_IP` unset. Run `npm run build && npm start`.
+Frontend: `frontend/.env.production` (committed, public values only) sets `NEXT_PUBLIC_API_URL=https://api.agizastore.xyz` and `NEXT_PUBLIC_SITE_URL=https://csinc91.com`. `REVALIDATE_SECRET` goes in the host’s environment variables. Leave `NEXT_IMAGE_ALLOW_LOCAL_IP` unset. Run `npm run build && npm start`.
 
 ### Deploying the frontend on Vercel
 
 - **Root Directory:** `frontend` (framework preset: Next.js).
-- **Environment variables:** `API_URL=https://api.your-domain/api/v1`, `NEXT_PUBLIC_SITE_URL=https://www.your-domain`, `REVALIDATE_SECRET` (same value as the backend’s `FRONTEND_REVALIDATE_SECRET`).
+- **Environment variables:** `NEXT_PUBLIC_API_URL=https://api.agizastore.xyz` and `NEXT_PUBLIC_SITE_URL=https://csinc91.com` (already in `.env.production`; Vercel values override them), plus `REVALIDATE_SECRET` (same value as the backend’s `FRONTEND_REVALIDATE_SECRET`). The backend address is defined once, in `src/lib/api-config.ts`.
 - The Laravel backend (API, admin, MySQL, file storage) must be hosted separately on a PHP host such as Laravel Cloud, Forge or a VPS. Vercel only runs the Next.js site.
 - If the API is unreachable during a build, pages are rendered on request instead of failing the build; redeploy once the API is live to prebuild them.
 

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
+import { BACKEND_URL } from "./src/lib/api-config";
 
-const apiOrigin = new URL(process.env.API_URL ?? "http://127.0.0.1:8291/api/v1");
+const apiOrigin = new URL(BACKEND_URL);
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
