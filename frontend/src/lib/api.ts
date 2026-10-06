@@ -1,5 +1,6 @@
 import "server-only";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import type {
   Book,
   BookCategory,
@@ -29,10 +30,21 @@ export class ApiError extends Error {
 type FetchOptions = { tags?: string[]; cache?: "no-store" };
 
 async function request<T>(path: string, { tags = [], cache }: FetchOptions = {}): Promise<T> {
-  const response = await fetch(`${API_URL}${path}`, {
-    headers: { Accept: "application/json" },
-    ...(cache === "no-store" ? { cache } : { next: { revalidate: REVALIDATE_SECONDS, tags } }),
-  });
+  let response: Response;
+
+  try {
+    response = await fetch(`${API_URL}${path}`, {
+      headers: { Accept: "application/json" },
+      ...(cache === "no-store" ? { cache } : { next: { revalidate: REVALIDATE_SECONDS, tags } }),
+    });
+  } catch (error) {
+    // If the API is unreachable while building (e.g. CI without the backend),
+    // defer this route to request time instead of failing the whole build.
+    if (process.env.NEXT_PHASE === "phase-production-build") {
+      await connection();
+    }
+    throw error;
+  }
 
   if (!response.ok) {
     throw new ApiError(response.status, `API ${response.status} for ${path}`);

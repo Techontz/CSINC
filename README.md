@@ -68,6 +68,13 @@ Backend (`backend/.env`):
 
 Frontend (`frontend/.env.production`): `API_URL`, `NEXT_PUBLIC_SITE_URL=https://www.your-domain`, `REVALIDATE_SECRET`. Leave `NEXT_IMAGE_ALLOW_LOCAL_IP` unset. Run `npm run build && npm start`.
 
+### Deploying the frontend on Vercel
+
+- **Root Directory:** `frontend` (framework preset: Next.js).
+- **Environment variables:** `API_URL=https://api.your-domain/api/v1`, `NEXT_PUBLIC_SITE_URL=https://www.your-domain`, `REVALIDATE_SECRET` (same value as the backend’s `FRONTEND_REVALIDATE_SECRET`).
+- The Laravel backend (API, admin, MySQL, file storage) must be hosted separately on a PHP host such as Laravel Cloud, Forge or a VPS. Vercel only runs the Next.js site.
+- If the API is unreachable during a build, pages are rendered on request instead of failing the build; redeploy once the API is live to prebuild them.
+
 ## Content the client still needs to supply
 
 - **Product PDFs.** The original site’s paid files are access-protected and could not be migrated. Each product shows “Enquire” instead of “Buy” until its PDF is uploaded (*Catalog → Products → Pricing & delivery*). The dashboard’s *Catalogue health* card lists what is missing.
