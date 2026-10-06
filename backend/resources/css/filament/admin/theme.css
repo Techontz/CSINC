@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/*
+ * CSinc91 CMS theme
+ * Navy (#00294c) structure, warm gold accents, quiet slate surfaces.
+ */
+:root {
+    --csi-navy: #00294c;
+    --csi-navy-900: #001c35;
+    --csi-navy-800: #0a3359;
+    --csi-gold: #c08a2e;
+    --csi-gold-soft: #f4e7cf;
+    --csi-canvas: #f4f5f7;
+    --csi-border: #e3e6eb;
+    --csi-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+}
+
+/* ---------- Canvas & typography ---------- */
+.fi-body {
+    background: var(--csi-canvas);
+    letter-spacing: -0.003em;
+}
+
+.fi-header-heading {
+    font-family: var(--csi-serif);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+    letter-spacing: -0.02em;
+    color: var(--csi-navy);
+}
+
+.fi-header-subheading {
+    @apply text-slate-500;
+}
+
+.fi-breadcrumbs-item-label {
+    @apply text-xs font-medium tracking-wide uppercase;
+}
+
+/* ---------- Sidebar ---------- */
+.fi-body .fi-sidebar,
+.fi-body .fi-sidebar.fi-sidebar-open {
+    background: linear-gradient(180deg, var(--csi-navy) 0%, var(--csi-navy-900) 100%);
+    @apply ring-0;
+}
+
+.fi-sidebar-header {
+    @apply px-6;
+    height: 4.5rem;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.fi-sidebar-header-controls {
+    &::after {
+        border-color: rgb(255 255 255 / 0.08) !important;
+    }
+}
+
+.fi-sidebar-nav {
+    @apply px-4 py-6;
+    scrollbar-color: rgb(255 255 255 / 0.15) transparent;
+}
+
+.fi-sidebar-group-label {
+    @apply text-[0.6875rem] font-semibold tracking-[0.14em] uppercase;
+    color: rgb(255 255 255 / 0.42);
+}
+
+.fi-sidebar-group-btn .fi-icon,
+.fi-sidebar-group-collapse-btn .fi-icon {
+    color: rgb(255 255 255 / 0.4) !important;
+}
+
+.fi-sidebar-item-btn {
+    @apply rounded-md px-3 py-2;
+
+    & > .fi-icon {
+        color: rgb(255 255 255 / 0.5) !important;
+    }
+}
+
+.fi-sidebar-item-label {
+    color: rgb(255 255 255 / 0.78);
+    @apply font-medium;
+}
+
+.fi-sidebar-item.fi-sidebar-item-has-url > .fi-sidebar-item-btn:hover,
+.fi-sidebar-item.fi-sidebar-item-has-url > .fi-sidebar-item-btn:focus-visible {
+    background: rgb(255 255 255 / 0.06);
+
+    & > .fi-sidebar-item-label {
+        color: #fff;
+    }
+}
+
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
+    background: rgb(255 255 255 / 0.1);
+    box-shadow: inset 2px 0 0 var(--csi-gold);
+
+    & > .fi-icon {
+        color: var(--csi-gold) !important;
+    }
+
+    & > .fi-sidebar-item-label {
+        color: #fff;
+    }
+}
+
+.fi-sidebar-item-badge-ctn .fi-badge {
+    background: var(--csi-gold);
+    color: var(--csi-navy-900);
+    --tw-ring-color: transparent;
+}
+
+.fi-sidebar-footer {
+    border-color: rgb(255 255 255 / 0.08) !important;
+}
+
+.fi-sidebar .fi-user-menu-trigger,
+.fi-sidebar .fi-dropdown-trigger > button {
+    color: rgb(255 255 255 / 0.85);
+}
+
+.fi-sidebar .fi-user-menu-trigger:hover {
+    background: rgb(255 255 255 / 0.06);
+}
+
+.fi-sidebar .fi-global-search-field .fi-input-wrp {
+    background: rgb(255 255 255 / 0.07);
+    --tw-ring-color: rgb(255 255 255 / 0.1);
+    @apply rounded-md;
+
+    & input {
+        color: #fff;
+    }
+
+    & input::placeholder,
+    & .fi-icon {
+        color: rgb(255 255 255 / 0.45);
+    }
+}
+
+.fi-sidebar .fi-sidebar-close-collapse-sidebar-btn .fi-icon,
+.fi-sidebar .fi-sidebar-open-collapse-sidebar-btn .fi-icon,
+.fi-sidebar .fi-icon-btn .fi-icon {
+    color: rgb(255 255 255 / 0.6);
+}
+
+.csi-sidebar-meta {
+    @apply mt-auto px-2 pt-6;
+}
+
+.csi-sidebar-site-link {
+    @apply flex items-center gap-2 rounded-md px-3 py-2 text-xs font-medium transition;
+    color: rgb(255 255 255 / 0.6);
+    border: 1px solid rgb(255 255 255 / 0.1);
+
+    &:hover {
+        color: #fff;
+        border-color: rgb(255 255 255 / 0.25);
+    }
+}
+
+/* ---------- Brand ---------- */
+.csi-brand {
+    @apply flex items-center gap-3;
+}
+
+.csi-brand-logo {
+    height: 1.75rem;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+}
+
+.csi-brand-logo-default {
+    display: none;
+}
+
+.csi-brand-tag {
+    @apply rounded-sm px-1.5 py-0.5 text-[0.625rem] font-semibold tracking-[0.18em];
+    color: var(--csi-gold);
+    border: 1px solid rgb(192 138 46 / 0.5);
+}
+
+.fi-simple-layout .csi-brand-logo-inverse {
+    display: none;
+}
+
+.fi-simple-layout .csi-brand-logo-default {
+    display: block;
+}
+
+.fi-simple-layout .csi-brand-tag {
+    color: var(--csi-navy);
+    border-color: var(--csi-border);
+}
+
+/* ---------- Mobile layout toggle (no topbar) ---------- */
+.fi-layout-sidebar-toggle-btn-ctn {
+    @apply bg-white;
+    border-bottom: 1px solid var(--csi-border);
+}
+
+/* ---------- Surfaces ---------- */
+.fi-section:not(.fi-section-not-contained),
+.fi-ta-ctn,
+.fi-wi-stats-overview-stat,
+.fi-wi-chart .fi-section,
+.fi-in-entry-wrp {
+    @apply rounded-xl;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
+    --tw-ring-color: var(--csi-border);
+}
+
+.fi-section-header-heading {
+    @apply text-[0.9375rem] font-semibold;
+    color: var(--csi-navy);
+}
+
+.fi-section-header-description {
+    @apply text-slate-500;
+}
+
+/* ---------- Tables ---------- */
+.fi-ta-header-cell {
+    @apply text-[0.6875rem] font-semibold tracking-[0.08em] text-slate-500 uppercase;
+}
+
+.fi-ta-row {
+    @apply transition-colors;
+}
+
+.fi-ta-row:hover {
+    background: #fafbfc;
+}
+
+.fi-ta-empty-state-heading {
+    font-family: var(--csi-serif);
+    @apply text-xl font-normal;
+    color: var(--csi-navy);
+}
+
+/* ---------- Buttons & badges ---------- */
+.fi-btn {
+    @apply rounded-md font-medium;
+}
+
+.fi-badge {
+    @apply rounded-md font-medium;
+}
+
+.fi-tabs {
+    @apply rounded-lg;
+}
+
+/* ---------- Stats ---------- */
+.fi-wi-stats-overview-stat-value {
+    font-family: var(--csi-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--csi-navy);
+}
+
+.fi-wi-stats-overview-stat-label {
+    @apply text-xs font-semibold tracking-[0.08em] uppercase;
+}
+
+/* ---------- Auth (split screen) ---------- */
+.fi-simple-layout {
+    background: #fff;
+
+    @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+        align-items: stretch;
+        min-height: 100dvh;
+    }
+}
+
+.fi-simple-layout .fi-simple-main-ctn {
+    @apply flex items-center justify-center px-6 py-16;
+}
+
+.fi-simple-layout .fi-simple-main {
+    @apply w-full bg-transparent p-0 shadow-none ring-0;
+    max-width: 26rem;
+}
+
+.fi-simple-header-heading {
+    font-family: var(--csi-serif);
+    font-weight: 400;
+    font-size: 2.25rem;
+    letter-spacing: -0.02em;
+    color: var(--csi-navy);
+}
+
+.fi-simple-header {
+    @apply items-start text-start;
+}
+
+.csi-auth-aside {
+    display: none;
+    position: relative;
+    min-height: 100dvh;
+    align-self: stretch;
+    overflow: hidden;
+    background: var(--csi-navy);
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.csi-auth-aside-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    filter: grayscale(0.35);
+}
+
+.csi-auth-aside-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgb(0 41 76 / 0.55) 0%, rgb(0 28 53 / 0.92) 75%);
+}
+
+.csi-auth-aside-content {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5rem;
+    color: #fff;
+}
+
+.csi-auth-aside-logo {
+    height: 2.5rem;
+    width: auto;
+    align-self: flex-start;
+    object-fit: contain;
+}
+
+.csi-auth-aside-eyebrow {
+    @apply mb-5 text-xs font-semibold tracking-[0.2em] uppercase;
+    color: var(--csi-gold);
+}
+
+.csi-auth-aside-statement {
+    font-family: var(--csi-serif);
+    font-size: clamp(2.25rem, 1.5rem + 2vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    max-width: 18ch;
+
+    & em {
+        color: #e9d3a8;
+    }
+}
+
+.csi-auth-aside-meta {
+    @apply text-xs;
+    color: rgb(255 255 255 / 0.5);
+}
+
+/* ---------- Dashboard custom widgets ---------- */
+.csi-welcome {
+    @apply relative overflow-hidden rounded-xl p-8 text-white;
+    background: linear-gradient(120deg, var(--csi-navy) 0%, var(--csi-navy-800) 100%);
+}
+
+.csi-welcome-eyebrow {
+    @apply text-xs font-semibold tracking-[0.18em] uppercase;
+    color: var(--csi-gold);
+}
+
+.csi-welcome-heading {
+    font-family: var(--csi-serif);
+    @apply mt-3 text-3xl leading-tight;
+    letter-spacing: -0.02em;
+}
+
+.csi-welcome-body {
+    @apply mt-2 max-w-xl text-sm;
+    color: rgb(255 255 255 / 0.72);
+}
+
+.csi-quick-action {
+    @apply flex items-center gap-3 rounded-lg border px-4 py-3 text-sm font-medium transition;
+    border-color: rgb(255 255 255 / 0.16);
+    color: #fff;
+
+    &:hover {
+        background: rgb(255 255 255 / 0.08);
+        border-color: rgb(255 255 255 / 0.3);
+    }
+}
+
+.csi-list-row {
+    @apply flex items-center gap-4 py-3;
+}
+
+.csi-list-row + .csi-list-row {
+    border-top: 1px solid var(--csi-border);
+}
+
+.csi-cover-thumb {
+    @apply h-14 w-10 shrink-0 rounded-sm object-cover;
+    box-shadow: 0 1px 3px rgb(15 23 42 / 0.15);
+}
+
+.csi-kv {
+    @apply grid grid-cols-[8rem_1fr] gap-x-4 gap-y-2 text-sm;
+
+    & dt {
+        @apply text-slate-500;
+    }
+
+    & dd {
+        @apply font-medium text-slate-800;
+    }
+}
+
+.csi-alert {
+    @apply flex items-start gap-3 rounded-lg border px-4 py-3 text-sm;
+    background: var(--csi-gold-soft);
+    border-color: rgb(192 138 46 / 0.35);
+    color: #6b4a12;
+}
+
+/* ---------- SEO preview ---------- */
+.csi-serp {
+    @apply rounded-lg border bg-white p-4;
+    border-color: var(--csi-border);
+}
+
+.csi-serp-url {
+    @apply truncate text-xs text-emerald-700;
+}
+
+.csi-serp-title {
+    @apply mt-1 truncate text-lg;
+    color: #1a0dab;
+}
+
+.csi-serp-desc {
+    @apply mt-1 line-clamp-2 text-sm text-slate-600;
+}

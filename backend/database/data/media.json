@@ -1,0 +1,122 @@
+[
+  {
+    "key": "hero-signing",
+    "url": "https://images.pexels.com/photos/4173195/pexels-photo-4173195.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Business owner signing documents with an advisor",
+    "folder": "site"
+  },
+  {
+    "key": "about-team",
+    "url": "https://images.pexels.com/photos/8553867/pexels-photo-8553867.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Diverse team celebrating a business milestone",
+    "folder": "site"
+  },
+  {
+    "key": "services-team",
+    "url": "https://images.pexels.com/photos/7108700/pexels-photo-7108700.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Diverse team collaborating in a strategy meeting",
+    "folder": "site"
+  },
+  {
+    "key": "website-development",
+    "url": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=2400&q=80&fm=jpg&fit=max",
+    "alt": "Website development workstation",
+    "folder": "site"
+  },
+  {
+    "key": "healthcare-care",
+    "url": "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=2400&q=80&fm=jpg&fit=max",
+    "alt": "Healthcare professionals caring for a patient",
+    "folder": "site"
+  },
+  {
+    "key": "team-laptops",
+    "url": "https://images.pexels.com/photos/30690398/pexels-photo-30690398.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Colleagues reviewing work on their laptops",
+    "folder": "site"
+  },
+  {
+    "key": "strategy-session",
+    "url": "https://images.pexels.com/photos/7993910/pexels-photo-7993910.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Colleagues working together on a laptop",
+    "folder": "site"
+  },
+  {
+    "key": "residential-care-home",
+    "url": "https://images.pexels.com/photos/7551610/pexels-photo-7551610.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Caregiver with an elderly resident at home",
+    "folder": "site"
+  },
+  {
+    "key": "pillar-business",
+    "url": "https://images.pexels.com/photos/7414023/pexels-photo-7414023.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Business consultants reviewing a client plan",
+    "folder": "site"
+  },
+  {
+    "key": "pillar-healthcare",
+    "url": "https://csinc91.com/wp-content/uploads/2026/07/bg2.jpg",
+    "alt": "Healthcare team outside a care facility",
+    "folder": "site"
+  },
+  {
+    "key": "pillar-products",
+    "url": "https://csinc91.com/wp-content/uploads/2026/07/bg3.jpg",
+    "alt": "Digital products on a tablet",
+    "folder": "site"
+  },
+  {
+    "key": "service-formation",
+    "url": "https://images.pexels.com/photos/8730781/pexels-photo-8730781.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Business owners signing formation documents",
+    "folder": "site"
+  },
+  {
+    "key": "service-business-credit",
+    "url": "https://csinc91.com/wp-content/uploads/2026/07/bg5.jpg",
+    "alt": "Reviewing business credit reports",
+    "folder": "site"
+  },
+  {
+    "key": "service-personal-credit",
+    "url": "https://images.pexels.com/photos/8441776/pexels-photo-8441776.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Advisor reviewing finances with a couple",
+    "folder": "site"
+  },
+  {
+    "key": "service-restructure",
+    "url": "https://csinc91.com/wp-content/uploads/2026/07/bg7.jpg",
+    "alt": "Planning a business restructure",
+    "folder": "site"
+  },
+  {
+    "key": "healthcare-meeting",
+    "url": "https://csinc91.com/wp-content/uploads/2026/07/bg8.jpg",
+    "alt": "Healthcare operators in a planning meeting",
+    "folder": "site"
+  },
+  {
+    "key": "healthcare-program",
+    "url": "https://images.pexels.com/photos/7869021/pexels-photo-7869021.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Team planning a care program together",
+    "folder": "site"
+  },
+  {
+    "key": "healthcare-resources",
+    "url": "https://images.pexels.com/photos/7467940/pexels-photo-7467940.jpeg?auto=compress&cs=tinysrgb&w=2400",
+    "alt": "Veterans meeting in a support group",
+    "folder": "site"
+  },
+  {
+    "key": "logo",
+    "alt": "CSinc91",
+    "folder": "brand",
+    "local": "brand/csinc91-logo.svg"
+  },
+  {
+    "key": "logo-inverse",
+    "alt": "CSinc91",
+    "folder": "brand",
+    "local": "brand/csinc91-wordmark-inverse.svg"
+  }
+]

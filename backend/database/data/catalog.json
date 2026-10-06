@@ -1,0 +1,578 @@
+[
+  {
+    "title": "Healthcare Business Foundation Template",
+    "slug": "1-page-healthcare-business-template",
+    "sku": "HC-016",
+    "short_description": "Instant-use healthcare business foundation template — print & go.",
+    "description": "<p>Instant-use healthcare business foundation template — print &amp; go. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 199,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_15.jpg",
+    "legacy_id": 564,
+    "sort_order": 1
+  },
+  {
+    "title": "Non-Medical Medical Transport Startup",
+    "slug": "non-medical-medical-transport-startup",
+    "sku": "HC-007",
+    "short_description": "Step-by-step startup guide — non-emergency medical transport service.",
+    "description": "<p>Step-by-step startup guide — non-emergency medical transport service. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_06.jpg",
+    "legacy_id": 555,
+    "sort_order": 2
+  },
+  {
+    "title": "Transitional Supportive Housing",
+    "slug": "transitional-supportive-housing",
+    "sku": "HC-003",
+    "short_description": "Step-by-step startup guide — transitional & supportive housing programs.",
+    "description": "<p>Step-by-step startup guide — transitional &amp; supportive housing programs. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_02.jpg",
+    "legacy_id": 551,
+    "sort_order": 3
+  },
+  {
+    "title": "Veterans Emergency Housing Startup",
+    "slug": "veterans-emergency-housing-startup",
+    "sku": "HC-011",
+    "short_description": "Step-by-step startup guide — emergency veterans housing program.",
+    "description": "<p>Step-by-step startup guide — emergency veterans housing program. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_08.jpg",
+    "legacy_id": 559,
+    "sort_order": 4
+  },
+  {
+    "title": "Foster Care Home Startup",
+    "slug": "foster-care-home-startup",
+    "sku": "HC-005",
+    "short_description": "Step-by-step startup guide — foster care home licensing & setup.",
+    "description": "<p>Step-by-step startup guide — foster care home licensing &amp; setup. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 29700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_05.jpg",
+    "legacy_id": 553,
+    "sort_order": 5
+  },
+  {
+    "title": "Non-Medical In-Home Care Startup",
+    "slug": "non-medical-in-home-care-startup",
+    "sku": "HC-004",
+    "short_description": "Step-by-step startup guide — non-medical in-home care services.",
+    "description": "<p>Step-by-step startup guide — non-medical in-home care services. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 29700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_04.jpg",
+    "legacy_id": 552,
+    "sort_order": 6
+  },
+  {
+    "title": "Veterans Housing Startup",
+    "slug": "veterans-housing-startup",
+    "sku": "HC-010",
+    "short_description": "Step-by-step startup guide — veterans housing program setup.",
+    "description": "<p>Step-by-step startup guide — veterans housing program setup. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 29700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_07.jpg",
+    "legacy_id": 558,
+    "sort_order": 7
+  },
+  {
+    "title": "Mobile Lab / DNA Startup",
+    "slug": "mobile-lab-dna-startup",
+    "sku": "HC-001",
+    "short_description": "Step-by-step startup guide — mobile laboratory & DNA testing business.",
+    "description": "<p>Step-by-step startup guide — mobile laboratory &amp; DNA testing business. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 39700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_01.jpg",
+    "legacy_id": 549,
+    "sort_order": 8
+  },
+  {
+    "title": "Residential Rehab / Sober Living Startup",
+    "slug": "residential-rehab-sober-living-startup",
+    "sku": "HC-006",
+    "short_description": "Step-by-step startup guide — residential rehab & sober living home.",
+    "description": "<p>Step-by-step startup guide — residential rehab &amp; sober living home. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 49700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_03.jpg",
+    "legacy_id": 554,
+    "sort_order": 9
+  },
+  {
+    "title": "Telehealth Business Startup",
+    "slug": "telehealth-business-startup",
+    "sku": "HC-002",
+    "short_description": "DIY startup guide — telehealth & virtual care business.",
+    "description": "<p>DIY startup guide — telehealth &amp; virtual care business. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 49700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/TELEHEALTH-cvr.jpg",
+    "legacy_id": 550,
+    "sort_order": 10
+  },
+  {
+    "title": "Group Home Startup",
+    "slug": "group-home-startup",
+    "sku": "HC-012",
+    "short_description": "Step-by-step startup guide — complete licensed group home operational setup.",
+    "description": "<p>Step-by-step startup guide — complete licensed group home operational setup. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 59700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_09.jpg",
+    "legacy_id": 560,
+    "sort_order": 11
+  },
+  {
+    "title": "Assisted Living Facility — Nationwide Edition",
+    "slug": "assisted-living-facility-nationwide-edition",
+    "sku": "HC-013",
+    "short_description": "Nationwide 50-state compliance edition — complete ALF startup guide.",
+    "description": "<p>Nationwide 50-state compliance edition — complete ALF startup guide. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 99700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_11.jpg",
+    "legacy_id": 561,
+    "sort_order": 12
+  },
+  {
+    "title": "Home Health Agency Startup",
+    "slug": "home-health-agency-startup",
+    "sku": "HC-014",
+    "short_description": "Step-by-step startup guide — home health agency operations.",
+    "description": "<p>Step-by-step startup guide — home health agency operations. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 99700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_13.jpg",
+    "legacy_id": 562,
+    "sort_order": 13
+  },
+  {
+    "title": "Hospice Care Agency Startup",
+    "slug": "hospice-care-agency-startup",
+    "sku": "HC-015",
+    "short_description": "Step-by-step startup guide — hospice care agency formation.",
+    "description": "<p>Step-by-step startup guide — hospice care agency formation. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 99700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "healthcare"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_14.jpg",
+    "legacy_id": 563,
+    "sort_order": 14
+  },
+  {
+    "title": "1-Page General Business Startup Template",
+    "slug": "1-page-general-business-startup-template",
+    "sku": "GB-020",
+    "short_description": "Instant-use single-page general business startup reference sheet.",
+    "description": "<p>Instant-use single-page general business startup reference sheet. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 199,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/1-pg-GENERAL-BUSINESS-TEMPLATE-cvr.jpg",
+    "legacy_id": 584,
+    "sort_order": 15
+  },
+  {
+    "title": "Box Truck Business",
+    "slug": "box-truck-business",
+    "sku": "GB-010",
+    "short_description": "Step-by-step startup guide — box truck logistics & delivery service.",
+    "description": "<p>Step-by-step startup guide — box truck logistics &amp; delivery service. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 4700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_25.jpg",
+    "legacy_id": 574,
+    "sort_order": 16
+  },
+  {
+    "title": "Event Planner Startup",
+    "slug": "event-planner-startup",
+    "sku": "GB-007",
+    "short_description": "Step-by-step startup guide — event planning & coordination business.",
+    "description": "<p>Step-by-step startup guide — event planning &amp; coordination business. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 4700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_22.jpg",
+    "legacy_id": 571,
+    "sort_order": 17
+  },
+  {
+    "title": "Home Appraiser Startup",
+    "slug": "home-appraiser-startup",
+    "sku": "GB-011",
+    "short_description": "Step-by-step startup guide — residential property appraisal service.",
+    "description": "<p>Step-by-step startup guide — residential property appraisal service. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 4700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_26.jpg",
+    "legacy_id": 575,
+    "sort_order": 18
+  },
+  {
+    "title": "Professional Lawn Care Startup",
+    "slug": "professional-lawn-care-startup",
+    "sku": "GB-008",
+    "short_description": "Step-by-step startup guide — professional lawn maintenance service.",
+    "description": "<p>Step-by-step startup guide — professional lawn maintenance service. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 4700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_23.jpg",
+    "legacy_id": 572,
+    "sort_order": 19
+  },
+  {
+    "title": "Housekeeping Startup",
+    "slug": "housekeeping-startup",
+    "sku": "GB-005",
+    "short_description": "Step-by-step startup guide — residential & commercial housekeeping.",
+    "description": "<p>Step-by-step startup guide — residential &amp; commercial housekeeping. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 9700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_20.jpg",
+    "legacy_id": 569,
+    "sort_order": 20
+  },
+  {
+    "title": "Irrigation Service Startup",
+    "slug": "irrigation-service-startup",
+    "sku": "GB-009",
+    "short_description": "DIY startup guide — irrigation installation & maintenance.",
+    "description": "<p>DIY startup guide — irrigation installation &amp; maintenance. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 9700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/IRRIGATION-SERVICE-cvr.jpg",
+    "legacy_id": 573,
+    "sort_order": 21
+  },
+  {
+    "title": "Janitorial Startup",
+    "slug": "janitorial-startup",
+    "sku": "GB-004",
+    "short_description": "Step-by-step startup guide — commercial janitorial services.",
+    "description": "<p>Step-by-step startup guide — commercial janitorial services. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 9700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_19.jpg",
+    "legacy_id": 568,
+    "sort_order": 22
+  },
+  {
+    "title": "Medical Courier Startup",
+    "slug": "medical-courier-startup",
+    "sku": "GB-006",
+    "short_description": "Step-by-step startup guide — medical courier & delivery service.",
+    "description": "<p>Step-by-step startup guide — medical courier &amp; delivery service. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 9700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_21.jpg",
+    "legacy_id": 570,
+    "sort_order": 23
+  },
+  {
+    "title": "Real Estate Wholesale Startup",
+    "slug": "real-estate-wholesale-startup",
+    "sku": "GB-012",
+    "short_description": "Step-by-step startup guide — real estate wholesaling & flips.",
+    "description": "<p>Step-by-step startup guide — real estate wholesaling &amp; flips. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 9700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_27.jpg",
+    "legacy_id": 576,
+    "sort_order": 24
+  },
+  {
+    "title": "Vending Machine Startup",
+    "slug": "vending-startup",
+    "sku": "GB-001",
+    "short_description": "Step-by-step startup guide — vending machine business.",
+    "description": "<p>Step-by-step startup guide — vending machine business. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 9700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_16.jpg",
+    "legacy_id": 565,
+    "sort_order": 25
+  },
+  {
+    "title": "Private Security Startup",
+    "slug": "private-security-startup",
+    "sku": "GB-014",
+    "short_description": "Step-by-step startup guide — private security company formation.",
+    "description": "<p>Step-by-step startup guide — private security company formation. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 11900,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_30.jpg",
+    "legacy_id": 578,
+    "sort_order": 26
+  },
+  {
+    "title": "Accounting Firm Startup",
+    "slug": "accounting-firm-startup",
+    "sku": "GB-002",
+    "short_description": "Step-by-step startup guide — accounting & bookkeeping practice.",
+    "description": "<p>Step-by-step startup guide — accounting &amp; bookkeeping practice. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 14700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_17.jpg",
+    "legacy_id": 566,
+    "sort_order": 27
+  },
+  {
+    "title": "Air / Plumbing Startup",
+    "slug": "air-plumbing-startup",
+    "sku": "GB-016",
+    "short_description": "Step-by-step startup guide — HVAC & plumbing trades business.",
+    "description": "<p>Step-by-step startup guide — HVAC &amp; plumbing trades business. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 14700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_32.jpg",
+    "legacy_id": 580,
+    "sort_order": 28
+  },
+  {
+    "title": "Staffing Agency Startup",
+    "slug": "staffing-agency-startup",
+    "sku": "GB-003",
+    "short_description": "Step-by-step startup guide — staffing & placement agency.",
+    "description": "<p>Step-by-step startup guide — staffing &amp; placement agency. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 14700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_18.jpg",
+    "legacy_id": 567,
+    "sort_order": 29
+  },
+  {
+    "title": "Trucking Dispatch Startup",
+    "slug": "trucking-dispatch-startup",
+    "sku": "GB-018",
+    "short_description": "DIY startup guide — trucking dispatch & logistics.",
+    "description": "<p>DIY startup guide — trucking dispatch &amp; logistics. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 14700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/TRUCKING-DISPATCH-cvr.jpg",
+    "legacy_id": 582,
+    "sort_order": 30
+  },
+  {
+    "title": "Collection Agency Startup",
+    "slug": "collection-agency-startup",
+    "sku": "GB-019",
+    "short_description": "Step-by-step startup guide — debt collection agency formation.",
+    "description": "<p>Step-by-step startup guide — debt collection agency formation. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_35.jpg",
+    "legacy_id": 583,
+    "sort_order": 31
+  },
+  {
+    "title": "Cybersecurity Business Startup",
+    "slug": "cybersecurity-business-startup",
+    "sku": "GB-015",
+    "short_description": "DIY startup guide — cybersecurity services business.",
+    "description": "<p>DIY startup guide — cybersecurity services business. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CYBERSECURITY-cvr.jpg",
+    "legacy_id": 579,
+    "sort_order": 32
+  },
+  {
+    "title": "Discount Store Startup",
+    "slug": "discount-store-startup",
+    "sku": "GB-017",
+    "short_description": "Step-by-step startup guide — discount & dollar store retail.",
+    "description": "<p>Step-by-step startup guide — discount &amp; dollar store retail. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_33.jpg",
+    "legacy_id": 581,
+    "sort_order": 33
+  },
+  {
+    "title": "Resell Furniture Store Startup",
+    "slug": "resell-furniture-store-startup",
+    "sku": "GB-013",
+    "short_description": "Step-by-step startup guide — furniture resale & retail store.",
+    "description": "<p>Step-by-step startup guide — furniture resale &amp; retail store. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 19700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_31.jpg",
+    "legacy_id": 577,
+    "sort_order": 34
+  },
+  {
+    "title": "CPR / First Aid Training Center",
+    "slug": "cpr-first-aid-training-center",
+    "sku": "HC-008",
+    "short_description": "Step-by-step startup guide — CPR & first aid certification training center.",
+    "description": "<p>Step-by-step startup guide — CPR &amp; first aid certification training center. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 39700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_28.jpg",
+    "legacy_id": 556,
+    "sort_order": 35
+  },
+  {
+    "title": "Caregiver Training Center",
+    "slug": "caregiver-training-center",
+    "sku": "HC-009",
+    "short_description": "Step-by-step startup guide — caregiver certification training program.",
+    "description": "<p>Step-by-step startup guide — caregiver certification training program. Instant PDF download. Practitioner support available.</p>",
+    "price_cents": 39700,
+    "sale_price_cents": null,
+    "currency": "USD",
+    "categories": [
+      "general-business"
+    ],
+    "cover_url": "https://csinc91.com/wp-content/uploads/2026/06/CSinc91_Ebook_Cover_29.jpg",
+    "legacy_id": 557,
+    "sort_order": 36
+  }
+]
