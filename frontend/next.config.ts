@@ -12,6 +12,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Self-contained server (.next/standalone/server.js) for GoDaddy cPanel "Setup Node.js App".
+  output: "standalone",
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],

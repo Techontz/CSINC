@@ -69,12 +69,22 @@ Backend (`backend/.env`):
 
 Frontend: `frontend/.env.production` (committed, public values only) sets `NEXT_PUBLIC_API_URL=https://api.csinc91.com` and `NEXT_PUBLIC_SITE_URL=https://csinc91.com`. `REVALIDATE_SECRET` goes in the host’s environment variables. Leave `NEXT_IMAGE_ALLOW_LOCAL_IP` unset. Run `npm run build && npm start`.
 
-### Deploying the frontend on Vercel
+### Hosting on GoDaddy cPanel
 
-- **Root Directory:** `frontend` (framework preset: Next.js).
-- **Environment variables:** `NEXT_PUBLIC_API_URL=https://api.csinc91.com` and `NEXT_PUBLIC_SITE_URL=https://csinc91.com` (already in `.env.production`; Vercel values override them), plus `REVALIDATE_SECRET` (same value as the backend’s `FRONTEND_REVALIDATE_SECRET`). The backend address is defined once, in `src/lib/api-config.ts`.
-- The Laravel backend (API, admin, MySQL, file storage) must be hosted separately on a PHP host such as Laravel Cloud, Forge or a VPS. Vercel only runs the Next.js site.
-- If the API is unreachable during a build, pages are rendered on request instead of failing the build; redeploy once the API is live to prebuild them.
+Both parts run on the GoDaddy cPanel plan:
+
+- **Backend** at `https://api.csinc91.com`: a cPanel subdomain whose document root is `csinc-api/public`, PHP 8.4, MySQL, and two cron jobs (`schedule:run` and `queue:work --stop-when-empty`).
+- **Website** at `https://csinc91.com`: a cPanel *Setup Node.js App* (Node 20.9 or newer) running the standalone build. Build it locally, never on the shared host:
+
+  ```bash
+  cd frontend
+  NEXT_PUBLIC_API_URL=https://api.csinc91.com NEXT_PUBLIC_SITE_URL=https://csinc91.com npm run build
+  cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/
+  # Linux image library for next/image on the server:
+  (cd .next/standalone && npm install --no-save --os=linux --cpu=x64 --libc=glibc sharp)
+  ```
+
+  Upload `.next/standalone` as the app root, set the startup file to `server.js`, and set `REVALIDATE_SECRET` (same value as the backend's `FRONTEND_REVALIDATE_SECRET`) and `NODE_ENV=production` in the app's environment variables. Run one app instance so cache refreshes from the CMS reach every page.
 
 ## Content the client still needs to supply
 
