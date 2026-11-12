@@ -40,7 +40,7 @@ class FilamentBookTest extends TestCase
             ->fillForm([
                 'title' => 'Irrigation Service Startup',
                 'slug' => 'irrigation-service-startup',
-                'short_description' => 'Step-by-step startup guide — irrigation services.',
+                'short_description' => 'Step-by-step startup guide for irrigation services.',
                 'price_cents' => '97.00',
                 'currency' => 'USD',
                 'language' => 'English',

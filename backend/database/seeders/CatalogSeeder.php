@@ -34,14 +34,14 @@ class CatalogSeeder extends Seeder
             'healthcare' => BookCategory::query()->updateOrCreate(['slug' => 'healthcare'], [
                 'name' => 'Healthcare',
                 'headline' => 'Healthcare & Residential Care Startup Guides',
-                'description' => 'Assisted living, group homes, veterans housing, hospice, transport & care training — priced low to high.',
+                'description' => 'Assisted living, group homes, veterans housing, hospice, transport & care training, priced low to high.',
                 'sort_order' => 1,
                 'is_published' => true,
             ]),
             'general-business' => BookCategory::query()->updateOrCreate(['slug' => 'general-business'], [
                 'name' => 'General Business',
                 'headline' => 'General Business Startup Guides',
-                'description' => 'Financial, retail, transport, cleaning, trades, security & service businesses — priced low to high.',
+                'description' => 'Financial, retail, transport, cleaning, trades, security & service businesses, priced low to high.',
                 'sort_order' => 2,
                 'is_published' => true,
             ]),
@@ -53,7 +53,7 @@ class CatalogSeeder extends Seeder
             $cover = $item['cover_url']
                 ? MediaSeeder::import($this->uploader, $item['cover_url'], 'media/covers/'.$item['slug'], 'covers', [
                     'title' => $item['title'].' cover',
-                    'alt' => $item['title'].' — startup guide cover',
+                    'alt' => $item['title'].' startup guide cover',
                 ], fn (string $message) => $this->command?->warn($message))
                 : null;
 

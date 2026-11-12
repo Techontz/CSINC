@@ -35,7 +35,7 @@ describe("ContactForm", () => {
   });
 
   it("sends the structured payload and shows the success state", async () => {
-    const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ message: "Thank you — received." }), { status: 201 }));
+    const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ message: "Thank you. Received." }), { status: 201 }));
     vi.stubGlobal("fetch", fetchMock);
     window.scrollTo = vi.fn();
 
@@ -46,7 +46,7 @@ describe("ContactForm", () => {
     await userEvent.click(screen.getByRole("checkbox", { name: /i agree/i }));
     await userEvent.click(screen.getByRole("button", { name: /submit inquiry/i }));
 
-    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Thank you — received."));
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Thank you. Received."));
     const body = JSON.parse(fetchMock.mock.calls[0][1].body);
     expect(body).toMatchObject({ first_name: "Ada", growth_stage: "Scaling", challenges: ["Strategy Development"], consent: true });
   });

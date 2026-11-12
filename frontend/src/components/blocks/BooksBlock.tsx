@@ -15,21 +15,21 @@ export function BooksBlock({ data }: { data: BlockMap["books"] }) {
 
   if (data.layout === "carousel") {
     return (
-      <section className="overflow-hidden bg-gold-light py-16 md:py-24 [&_.book-cat]:text-navy/80">
-        <div className="container-site">
-          <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-3xl">
-              {data.eyebrow && <Eyebrow className="mb-4 !text-navy/70">{data.eyebrow}</Eyebrow>}
-              <h2 className="font-serif text-h2 text-navy [&_em]:text-navy">
-                <Accent text={data.heading} />
-              </h2>
-              {data.intro && <p className="mt-4 text-lead text-navy/75">{data.intro}</p>}
-            </div>
-            {action}
-          </Reveal>
-          <div className="mt-12">
-            <BookCarousel books={data.books} />
-          </div>
+      <section className="section-y overflow-hidden bg-white">
+        <div className="container-site max-w-[84rem]">
+          <BookCarousel
+            books={data.books}
+            header={
+              <Reveal className="max-w-3xl">
+                {data.eyebrow && <Eyebrow className="mb-5">{data.eyebrow}</Eyebrow>}
+                <h2 className="font-serif text-h2 text-balance text-navy">
+                  <Accent text={data.heading} />
+                </h2>
+                {data.intro && <p className="mt-4 text-lead text-muted">{data.intro}</p>}
+                {action && <div className="mt-6">{action}</div>}
+              </Reveal>
+            }
+          />
         </div>
       </section>
     );

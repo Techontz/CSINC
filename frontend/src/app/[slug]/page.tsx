@@ -37,7 +37,7 @@ export default async function CmsPage({ params }: Props) {
   const isDocument = page.blocks.some((block) => block.type === "rich_text");
 
   const aside = isDocument ? (
-    <div className="border-t-2 border-gold bg-paper p-8 lg:sticky lg:top-[6.5rem]">
+    <div className="border-t-2 border-gold rounded-[1.5rem] bg-paper p-8 lg:sticky lg:top-[7.5rem]">
       <p className="eyebrow text-navy">Questions?</p>
       <p className="mt-4 text-sm leading-relaxed text-muted">
         Contact our support team at{" "}

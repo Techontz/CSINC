@@ -107,10 +107,12 @@ export default async function ProductPage({ params }: Props) {
 
         <div className="container-site grid gap-12 pb-20 pt-10 lg:grid-cols-12 lg:gap-16 lg:pb-28 lg:pt-14">
           <div className="lg:col-span-6">
-            <div className="lg:sticky lg:top-[6.5rem]">
+            <div className="lg:sticky lg:top-[7.5rem]">
               <Reveal variant="mask" immediate>
-                <div className="flex justify-center bg-paper px-[14%] py-10 sm:py-12">
-                  <BookCover cover={book.cover} title={book.title} sizes="(min-width: 1024px) 34vw, 76vw" preload className="w-full max-w-[20rem]" />
+                <div className="relative isolate flex justify-center overflow-hidden rounded-[2rem] bg-[radial-gradient(110%_80%_at_50%_0%,#ffffff_0%,var(--color-sky)_55%,var(--color-sky-deep)_100%)] px-[10%] pb-6 pt-12 sm:pt-16">
+                  <span aria-hidden="true" className="absolute -right-24 -top-24 -z-10 h-72 w-72 rounded-full border border-navy/10" />
+                  <span aria-hidden="true" className="absolute -right-10 -top-10 -z-10 h-44 w-44 rounded-full border border-gold/30" />
+                  <BookCover title={book.title} category={category?.name} className="max-w-[30rem]" />
                 </div>
               </Reveal>
               {book.gallery.length > 0 && (
@@ -127,9 +129,9 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="lg:col-span-6 lg:pt-6">
             <Reveal immediate>
-              {category && <p className="eyebrow text-gold-ink">{category.name}</p>}
+              {category && <p className="tag-pill">{category.name}</p>}
               <h1 className="mt-4 font-serif text-h1 text-navy">{book.title}</h1>
-              {book.subtitle && <p className="mt-4 font-serif text-2xl italic text-navy/70">{book.subtitle}</p>}
+              {book.subtitle && <p className="mt-4 text-2xl font-medium text-navy/70">{book.subtitle}</p>}
               {book.short_description && <p className="mt-7 text-lead text-muted">{book.short_description}</p>}
             </Reveal>
 
@@ -197,7 +199,7 @@ export default async function ProductPage({ params }: Props) {
               </ul>
             )}
 
-            <div className="mt-14 bg-paper p-8">
+            <div className="mt-14 rounded-[1.5rem] bg-paper p-8">
               <p className="font-serif text-xl text-navy">Questions before you buy?</p>
               <p className="mt-2 text-sm leading-relaxed text-muted">Our practitioners can help you decide which guide fits your plans.</p>
               <div className="mt-5">

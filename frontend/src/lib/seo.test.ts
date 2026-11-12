@@ -18,7 +18,7 @@ const site = {
     consultation_url: null,
   },
   social: [{ platform: "linkedin", url: "https://linkedin.com/company/csinc91" }],
-  seo: { title_template: "%s — CSinc91", default_title: "CSinc91", default_description: "Default description", image: null },
+  seo: { title_template: "%s | CSinc91", default_title: "CSinc91", default_description: "Default description", image: null },
   footer: { statement: null },
   commerce: { enabled: true, currency: "USD", checkout_note: null },
   navigation: { header: [], footer: [], legal: [] },

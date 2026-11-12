@@ -62,7 +62,7 @@ class PageBlocks
     private static function labelled(string $label): \Closure
     {
         return fn (?array $state): string => $label.(filled($state['heading'] ?? $state['text'] ?? null)
-            ? ' — '.str(strip_tags(str_replace('*', '', (string) ($state['heading'] ?? $state['text']))))->limit(60)
+            ? ': '.str(strip_tags(str_replace('*', '', (string) ($state['heading'] ?? $state['text']))))->limit(60)
             : '');
     }
 
@@ -111,7 +111,7 @@ class PageBlocks
     private static function heroSlider(): Block
     {
         return Block::make('hero_slider')
-            ->label(fn (?array $state): string => 'Video hero slider'.(filled($state['slides'] ?? null) ? ' — '.count($state['slides']).' slides' : ''))
+            ->label(fn (?array $state): string => 'Video hero slider'.(filled($state['slides'] ?? null) ? ': '.count($state['slides']).' slides' : ''))
             ->icon('heroicon-o-film')
             ->schema([
                 Repeater::make('slides')

@@ -38,7 +38,7 @@ class PagesTable
                     ->boolean()
                     ->trueIcon('heroicon-o-lock-closed')
                     ->falseIcon('heroicon-o-minus')
-                    ->tooltip(fn (Page $record): ?string => $record->is_system ? 'Core page — cannot be deleted' : null),
+                    ->tooltip(fn (Page $record): ?string => $record->is_system ? 'Core page: cannot be deleted' : null),
                 TextColumn::make('blocks')
                     ->label('Sections')
                     ->state(fn (Page $record): int => count($record->blocks ?? []))

@@ -4,14 +4,13 @@ import { Accent } from "./Accent";
 import { Reveal } from "./Reveal";
 
 /**
- * Small uppercase label above headings. `edge` draws a rule running in from
- * the left edge of the viewport, used on page heroes.
+ * Small tinted pill label above headings. `edge` is kept for API
+ * compatibility; the pill style no longer draws an edge rule.
  */
-export function Eyebrow({ children, tone = "dark", className, edge = false }: { children: ReactNode; tone?: "dark" | "light"; className?: string; edge?: boolean }) {
+export function Eyebrow({ children, tone = "dark", className }: { children: ReactNode; tone?: "dark" | "light"; className?: string; edge?: boolean }) {
   return (
-    <p className={cn("eyebrow relative flex items-center", tone === "dark" ? "text-gold-ink" : "text-gold-light", className)}>
-      {edge && <span aria-hidden="true" className="absolute right-full mr-4 h-[2px] w-[100vw] max-w-[3.125rem] bg-current" />}
-      {children}
+    <p className={cn("flex", className)}>
+      <span className={tone === "dark" ? "tag-pill" : "tag-pill-light"}>{children}</span>
     </p>
   );
 }
@@ -39,7 +38,7 @@ export function SectionHeading({
     <div className={cn("flex flex-col gap-8 md:flex-row md:items-end md:justify-between", className)}>
       <Reveal className="max-w-3xl">
         {eyebrow && <Eyebrow tone={tone} className="mb-4">{eyebrow}</Eyebrow>}
-        <Tag className={cn("font-serif", size === "lg" ? "text-h2" : "text-h2s", tone === "dark" ? "text-navy" : "text-white [&_em]:text-gold-light")}>
+        <Tag className={cn("font-serif text-balance", size === "lg" ? "text-h2" : "text-h2s", tone === "dark" ? "text-navy" : "text-white [&_em]:text-gold-light")}>
           <Accent text={heading} />
         </Tag>
         {intro && <p className={cn("mt-5 max-w-2xl text-lead", tone === "dark" ? "text-muted" : "text-white/75")}>{intro}</p>}

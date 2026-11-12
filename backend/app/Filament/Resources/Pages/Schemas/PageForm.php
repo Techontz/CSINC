@@ -46,7 +46,7 @@ class PageForm
                                 ->unique(Page::class, 'slug', ignoreRecord: true)
                                 ->notIn(PageResource::RESERVED_SLUGS)
                                 ->disabled(fn (?Page $record): bool => (bool) $record?->is_system)
-                                ->helperText(fn (?Page $record): ?string => $record?->is_system ? 'System page — its address is fixed.' : null),
+                                ->helperText(fn (?Page $record): ?string => $record?->is_system ? 'System page: its address is fixed.' : null),
                             Textarea::make('summary')
                                 ->rows(2)
                                 ->maxLength(500)

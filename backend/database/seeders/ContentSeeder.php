@@ -39,12 +39,12 @@ class ContentSeeder extends Seeder
         $services = [
             [
                 'slug' => 'business-formation', 'group' => ServiceGroup::Business, 'title' => 'Business Formation', 'image' => 'service-formation',
-                'summary' => 'Complete setup of your business entity — LLC, corporation, or nonprofit. Includes EIN registration, operating agreements, corporate bylaws, business banking setup, and all foundational documentation required to operate legally from day one.',
+                'summary' => 'Complete setup of your business entity: LLC, corporation, or nonprofit. Includes EIN registration, operating agreements, corporate bylaws, business banking setup, and all foundational documentation required to operate legally from day one.',
                 'highlights' => ['LLC & Corp Setup', 'EIN Registration', 'Operating Agreements'],
             ],
             [
-                'slug' => 'business-credit-development', 'group' => ServiceGroup::Business, 'title' => 'Business Credit Development', 'image' => 'service-business-credit',
-                'summary' => 'Build a legitimate, fundable business credit profile completely separate from your personal credit — trade lines, vendor accounts, and a business credit file that positions your company to qualify for financing and higher limits over time.',
+                'slug' => 'business-credit-development', 'group' => ServiceGroup::Business, 'title' => 'Business Credit Development', 'image' => 'strategy-session',
+                'summary' => 'Build a legitimate, fundable business credit profile completely separate from your personal credit: trade lines, vendor accounts, and a business credit file that positions your company to qualify for financing and higher limits over time.',
                 'highlights' => ['Trade Line Strategy', 'Vendor Accounts', 'Funding Readiness'],
             ],
             [
@@ -53,23 +53,23 @@ class ContentSeeder extends Seeder
                 'highlights' => ['Dispute Strategy', 'Score Optimization', 'Consumer Rights'],
             ],
             [
-                'slug' => 'business-restructure', 'group' => ServiceGroup::Business, 'title' => 'Business Restructure', 'image' => 'service-restructure',
+                'slug' => 'business-restructure', 'group' => ServiceGroup::Business, 'title' => 'Business Restructure', 'image' => 'services-team',
                 'summary' => 'Already operating but need a stronger foundation? We assess your structure, identify gaps in compliance, credit positioning, and operational efficiency, then rebuild the infrastructure needed for growth.',
                 'highlights' => ['Entity Restructure', 'Compliance Audit', 'Scaling Strategy'],
             ],
             [
                 'slug' => 'healthcare-business-services', 'group' => ServiceGroup::Healthcare, 'title' => 'Business Services', 'image' => 'pillar-business',
-                'summary' => 'Entity formation, business & personal credit development, and business restructuring — the financial foundation your company needs to grow and qualify for funding.',
+                'summary' => 'Entity formation, business & personal credit development, and business restructuring: the financial foundation your company needs to grow and qualify for funding.',
                 'highlights' => ['RAL & Group Homes', 'Sober Living', 'Hospice'],
             ],
             [
                 'slug' => 'healthcare-housing', 'group' => ServiceGroup::Healthcare, 'title' => 'Healthcare & Housing', 'image' => 'healthcare-care',
-                'summary' => 'Specialized consulting for care-facility operators — assisted living, group homes, sober living, veterans housing, hospice, compliance & survey readiness.',
+                'summary' => 'Specialized consulting for care-facility operators: assisted living, group homes, sober living, veterans housing, hospice, compliance & survey readiness.',
                 'highlights' => ['Plan of Corrections', 'Pre-Survey Audit'],
             ],
             [
-                'slug' => 'healthcare-digital-products', 'group' => ServiceGroup::Healthcare, 'title' => 'Digital Products', 'image' => 'pillar-products',
-                'summary' => '{{products.count}} step-by-step startup blueprints — healthcare, residential care & general business — delivered as instant PDF downloads with practitioner support.',
+                'slug' => 'healthcare-digital-products', 'group' => ServiceGroup::Healthcare, 'title' => 'Digital Products', 'image' => 'team-laptops',
+                'summary' => '{{products.count}} step-by-step startup blueprints for healthcare, residential care & general business, delivered as instant PDF downloads with practitioner support.',
                 'highlights' => ['Business Plans', 'Grant Strategy'],
                 'link_label' => 'Browse products', 'link_url' => '/products',
             ],
@@ -130,7 +130,7 @@ class ContentSeeder extends Seeder
             [
                 'slug' => Page::HOME_SLUG,
                 'title' => 'Home',
-                'seo_title' => 'CSinc91 — Web Development, Business Automation and Digital Marketing',
+                'seo_title' => 'CSinc91 | Web Development, Business Automation and Digital Marketing',
                 'seo_description' => 'Strategic consulting, startup blueprints, and done-for-you business infrastructure for entrepreneurs, care-facility operators, and small business owners at every stage.',
                 'blocks' => [
                     $this->block('hero_slider', [
@@ -166,7 +166,7 @@ class ContentSeeder extends Seeder
                             [
                                 'eyebrow' => 'Digital products',
                                 'heading' => '{{products.count}} step-by-step *startup* blueprints',
-                                'body' => 'Instant PDF downloads with practitioner support — healthcare, residential care & general business.',
+                                'body' => 'Instant PDF downloads with practitioner support: healthcare, residential care & general business.',
                                 'link_label' => 'Browse products',
                                 'link_url' => '/products',
                                 'video_id' => MediaSeeder::idFor('hero-video-digital'),
@@ -180,14 +180,14 @@ class ContentSeeder extends Seeder
                         'link_label' => 'See all services',
                         'link_url' => '/services',
                         'items' => [
-                            ['title' => 'Business Services', 'body' => 'Entity formation, business & personal credit development, and business restructuring — the financial foundation your company needs to grow and qualify for funding.', 'image_id' => MediaSeeder::idFor('pillar-business'), 'link_label' => 'Explore services', 'link_url' => '/services'],
-                            ['title' => 'Healthcare & Housing', 'body' => 'Specialized consulting for care-facility operators — assisted living, group homes, sober living, veterans housing, hospice, compliance & survey readiness.', 'image_id' => MediaSeeder::idFor('residential-care-home'), 'link_label' => 'Explore healthcare', 'link_url' => '/healthcare'],
-                            ['title' => 'Digital Products', 'body' => '{{products.count}} step-by-step startup blueprints — healthcare, residential care & general business — delivered as instant PDF downloads with practitioner support.', 'image_id' => MediaSeeder::idFor('team-laptops'), 'link_label' => 'Browse products', 'link_url' => '/products'],
+                            ['title' => 'Business Services', 'body' => 'Entity formation, business & personal credit development, and business restructuring: the financial foundation your company needs to grow and qualify for funding.', 'image_id' => MediaSeeder::idFor('pillar-business'), 'link_label' => 'Explore services', 'link_url' => '/services'],
+                            ['title' => 'Healthcare & Housing', 'body' => 'Specialized consulting for care-facility operators: assisted living, group homes, sober living, veterans housing, hospice, compliance & survey readiness.', 'image_id' => MediaSeeder::idFor('residential-care-home'), 'link_label' => 'Explore healthcare', 'link_url' => '/healthcare'],
+                            ['title' => 'Digital Products', 'body' => '{{products.count}} step-by-step startup blueprints for healthcare, residential care & general business, delivered as instant PDF downloads with practitioner support.', 'image_id' => MediaSeeder::idFor('team-laptops'), 'link_label' => 'Browse products', 'link_url' => '/products'],
                         ],
                     ]),
                     $this->block('service_links', [
                         'heading' => 'Building strong businesses from the *foundation up*',
-                        'body' => 'From forming your first entity to restructuring an established operation — we provide the financial foundation, credit infrastructure, and strategic framework your business needs to grow.',
+                        'body' => 'From forming your first entity to restructuring an established operation, we provide the financial foundation, credit infrastructure, and strategic framework your business needs to grow.',
                         'image_id' => MediaSeeder::idFor('strategy-session'),
                     ]),
                     $this->block('results', [
@@ -244,15 +244,15 @@ class ContentSeeder extends Seeder
                         'heading' => 'What *drives* our mission',
                         'items' => [
                             ['label' => 'Our Mission', 'body' => 'To empower entrepreneurs and small businesses through expert consultation, strategic resources, and tailored solutions that foster growth, innovation, and sustainability.'],
-                            ['label' => 'Our Vision', 'body' => 'To be a leading force in transforming ideas into successful businesses — creating accessible, results-driven pathways for entrepreneurs around the world.'],
-                            ['label' => 'Our Values', 'body' => 'We build relationships based on honesty, transparency, and accountability — striving for the highest standards in every project, every time.'],
+                            ['label' => 'Our Vision', 'body' => 'To be a leading force in transforming ideas into successful businesses, creating accessible, results-driven pathways for entrepreneurs around the world.'],
+                            ['label' => 'Our Values', 'body' => 'We build relationships based on honesty, transparency, and accountability, striving for the highest standards in every project, every time.'],
                         ],
                     ]),
                     $this->block('faq', [
                         'eyebrow' => 'FAQ',
                         'heading' => 'Frequently asked *questions*',
                         'items' => [
-                            ['question' => 'What type of businesses do you work with?', 'answer' => '<p>We work with a wide range of businesses — from startups and small businesses to established companies — offering customized consultation and support tailored to each client’s needs.</p>'],
+                            ['question' => 'What type of businesses do you work with?', 'answer' => '<p>We work with a wide range of businesses, from startups and small businesses to established companies, offering customized consultation and support tailored to each client’s needs.</p>'],
                             ['question' => 'Do I need an appointment for document preparation or notary services?', 'answer' => '<p>Yes, we recommend scheduling an appointment to ensure availability and timely service. Walk-ins may be accommodated depending on availability.</p>'],
                             ['question' => 'Can you help me start a new business?', 'answer' => '<p>Absolutely. Our Business Start-Up Consultation service is designed to guide you through every step, from planning and registration to compliance and growth strategies.</p>'],
                             ['question' => 'Are your services available online or only in person?', 'answer' => '<p>We offer both in-person and remote services, depending on your preference and the nature of the service. Many consultations can be conducted over the phone or via video call.</p>'],
@@ -265,13 +265,13 @@ class ContentSeeder extends Seeder
                 'slug' => 'services',
                 'title' => 'Services',
                 'seo_title' => 'Business Services',
-                'seo_description' => 'Business formation, business credit development, personal credit consulting and business restructuring — the foundation your business needs to grow and qualify for funding.',
+                'seo_description' => 'Business formation, business credit development, personal credit consulting and business restructuring: the foundation your business needs to grow and qualify for funding.',
                 'blocks' => [
                     $this->block('hero', [
                         'variant' => 'split',
                         'eyebrow' => 'Services',
                         'heading' => 'Building strong businesses from the *foundation* up',
-                        'body' => 'From forming your first entity to restructuring an established operation — we provide the financial foundation, credit infrastructure, and strategic framework your business needs to grow, qualify for funding, and sustain long-term success.',
+                        'body' => 'From forming your first entity to restructuring an established operation, we provide the financial foundation, credit infrastructure, and strategic framework your business needs to grow, qualify for funding, and sustain long-term success.',
                         'primary_label' => 'Contact Us',
                         'primary_url' => '/contact-us',
                         'image_id' => MediaSeeder::idFor('pillar-business'),
@@ -299,13 +299,13 @@ class ContentSeeder extends Seeder
                 'slug' => 'healthcare',
                 'title' => 'Healthcare',
                 'seo_title' => 'Healthcare & Housing Consulting',
-                'seo_description' => 'Independent consulting for care facility operators, housing entrepreneurs, and healthcare business owners — from startup to sustained operations.',
+                'seo_description' => 'Independent consulting for care facility operators, housing entrepreneurs, and healthcare business owners, from startup to sustained operations.',
                 'blocks' => [
                     $this->block('hero', [
                         'variant' => 'split',
                         'eyebrow' => 'Healthcare & housing',
                         'heading' => 'Supporting the operators who care for the *most vulnerable*',
-                        'body' => 'From startup to sustained operations — independent consulting for care facility operators, housing entrepreneurs, and healthcare business owners at every stage.',
+                        'body' => 'From startup to sustained operations: independent consulting for care facility operators, housing entrepreneurs, and healthcare business owners at every stage.',
                         'primary_label' => 'Contact Us',
                         'primary_url' => '/contact-us',
                         'secondary_label' => 'Healthcare guides',
@@ -321,7 +321,7 @@ class ContentSeeder extends Seeder
                     $this->block('books', [
                         'eyebrow' => 'Healthcare products',
                         'heading' => 'Browse healthcare *startup guides*',
-                        'intro' => '{{category.healthcare.count}} done-for-you PDF blueprints — from mobile lab to assisted living & hospice.',
+                        'intro' => '{{category.healthcare.count}} done-for-you PDF blueprints, from mobile lab to assisted living & hospice.',
                         'source' => 'category',
                         'category' => 'healthcare',
                         'limit' => 8,
@@ -345,7 +345,7 @@ class ContentSeeder extends Seeder
                 'title' => 'Products',
                 'eyebrow' => 'Products & Resources',
                 'summary' => 'Step-by-step resources for entrepreneurs, care facility operators, and business owners at every level. All products are instant PDF downloads and include practitioner support.',
-                'seo_title' => 'Products — Startup Guides, Workbooks & Templates',
+                'seo_title' => 'Products | Startup Guides, Workbooks & Templates',
                 'seo_description' => 'Step-by-step startup guides, workbooks and templates for entrepreneurs, care facility operators and business owners. Instant PDF downloads with practitioner support.',
                 'blocks' => [
                     $this->block('hero', [
@@ -360,7 +360,7 @@ class ContentSeeder extends Seeder
                 'slug' => 'contact-us',
                 'title' => 'Contact Us',
                 'seo_title' => 'Contact Us',
-                'seo_description' => 'Whether you need more information, want to book a consultation, or simply need guidance — get in touch with CSinc91 in Atlanta, GA.',
+                'seo_description' => 'Whether you need more information, want to book a consultation, or simply need guidance, get in touch with CSinc91 in Atlanta, GA.',
                 'blocks' => [
                     $this->block('hero', [
                         'variant' => 'text',
@@ -427,7 +427,7 @@ class ContentSeeder extends Seeder
                 ['label' => 'Program design & client acquisition', 'url' => '/healthcare#program-design-client-acquisition', 'description' => 'Referral outreach, intake templates and census building.'],
                 ['label' => 'Healthcare startup guides', 'url' => '/product-category/healthcare', 'description' => 'Done-for-you PDF blueprints for care operators.'],
             ]],
-            ['label' => 'Products', 'url' => '/products', 'description' => 'Startup guides, workbooks & templates — instant PDF downloads with practitioner support.', 'children' => [
+            ['label' => 'Products', 'url' => '/products', 'description' => 'Startup guides, workbooks & templates: instant PDF downloads with practitioner support.', 'children' => [
                 ['label' => 'Healthcare & Residential Care', 'url' => '/product-category/healthcare', 'description' => 'Assisted living, group homes, veterans housing, hospice, transport & care training.'],
                 ['label' => 'General Business', 'url' => '/product-category/general-business', 'description' => 'Financial, retail, transport, cleaning, trades, security & service businesses.'],
                 ['label' => 'All products', 'url' => '/products', 'description' => 'Browse the complete library.'],

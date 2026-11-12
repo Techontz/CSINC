@@ -86,7 +86,7 @@ export function ContactForm({ options }: { options: ConsultationOptions }) {
 
       if (response.ok) {
         setStatus("success");
-        setMessage(body.message ?? "Thank you — your inquiry has been received.");
+        setMessage(body.message ?? "Thank you. Your inquiry has been received.");
         formRef.current?.reset();
         window.scrollTo({ top: (formRef.current?.getBoundingClientRect().top ?? 0) + window.scrollY - 140 });
         return;
@@ -112,11 +112,11 @@ export function ContactForm({ options }: { options: ConsultationOptions }) {
 
   if (status === "success") {
     return (
-      <div role="status" className="border border-navy/15 bg-paper p-10 md:p-14">
-        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-navy text-gold-light">
+      <div role="status" className="rounded-[2rem] bg-white p-10 shadow-[0_40px_80px_-50px_rgba(0,41,76,0.45)] ring-1 ring-navy/[0.06] md:p-14">
+        <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gold text-white shadow-[0_12px_28px_-12px_rgba(185,133,44,0.9)]">
           <Check size={26} />
         </span>
-        <h3 className="mt-8 font-serif text-h3 text-navy">Message received</h3>
+        <h3 className="mt-8 text-[2rem] font-bold tracking-[-0.03em] text-navy">Message received</h3>
         <p className="mt-4 max-w-lg text-lead text-muted">{message}</p>
         <button type="button" onClick={() => setStatus("idle")} className={buttonClasses("outline", "mt-10")}>
           Send another message
@@ -126,9 +126,16 @@ export function ContactForm({ options }: { options: ConsultationOptions }) {
   }
 
   return (
-    <form ref={formRef} onSubmit={onSubmit} onFocus={markStarted} noValidate className="space-y-16" aria-describedby={status === "error" ? "form-status" : undefined}>
+    <form
+      ref={formRef}
+      onSubmit={onSubmit}
+      onFocus={markStarted}
+      noValidate
+      className="space-y-12 rounded-[2rem] bg-white p-6 shadow-[0_1px_0_rgba(0,28,53,0.04),0_2px_6px_-2px_rgba(0,28,53,0.08),0_40px_80px_-50px_rgba(0,41,76,0.45)] ring-1 ring-navy/[0.06] sm:p-10 md:space-y-14 md:p-12"
+      aria-describedby={status === "error" ? "form-status" : undefined}
+    >
       {product && (
-        <p className="border-l-2 border-gold bg-paper px-5 py-4 text-sm text-navy">
+        <p className="rounded-xl border-l-4 border-gold bg-paper px-5 py-4 text-sm text-navy">
           Inquiry about: <strong className="font-semibold">{product}</strong>
         </p>
       )}
@@ -176,10 +183,10 @@ export function ContactForm({ options }: { options: ConsultationOptions }) {
           autoComplete="name"
           required
           error={errors.signature}
-          hint="Type your full name — your signature confirms your interest and commitment to growth."
+          hint="Type your full name. Your signature confirms your interest and commitment to growth."
           className="md:col-span-2"
         />
-        <label className="flex cursor-pointer items-start gap-4 md:col-span-2">
+        <label className="flex cursor-pointer items-start gap-4 rounded-2xl bg-paper p-5 md:col-span-2">
           <input type="checkbox" name="consent" className="mt-1 h-5 w-5 shrink-0 accent-navy" aria-invalid={Boolean(errors.consent)} />
           <span className="text-sm leading-relaxed text-muted">
             I agree that CSinc91 may store the details I have submitted and contact me about my inquiry.
@@ -194,11 +201,12 @@ export function ContactForm({ options }: { options: ConsultationOptions }) {
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <div className="flex flex-col gap-6 border-t border-line pt-10 sm:flex-row sm:items-center sm:justify-between">
-        <p id="form-status" role={status === "error" ? "alert" : undefined} className={status === "error" ? "text-sm text-red-700" : "text-sm text-muted"}>
+      <div className="-mx-6 -mb-6 flex flex-col gap-6 rounded-b-[2rem] border-t border-line bg-paper/70 px-6 py-7 sm:-mx-10 sm:-mb-10 sm:flex-row sm:items-center sm:justify-between sm:px-10 md:-mx-12 md:-mb-12 md:px-12">
+        <p id="form-status" role={status === "error" ? "alert" : undefined} className={status === "error" ? "text-sm text-red-700" : "flex items-center gap-2.5 text-sm text-muted"}>
+          {status !== "error" && <span aria-hidden="true" className="h-2 w-2 shrink-0 rounded-full bg-gold shadow-[0_0_0_4px_rgba(185,133,44,0.18)]" />}
           {status === "error" ? message : "We respond to every inquiry, usually within one business day."}
         </p>
-        <button type="submit" disabled={status === "submitting"} className={buttonClasses("solid", "shrink-0")}>
+        <button type="submit" disabled={status === "submitting"} className={buttonClasses("solid", "shrink-0 px-7")}>
           <span>{status === "submitting" ? "Sending…" : "Submit inquiry"}</span>
           {status !== "submitting" && <ArrowUpRight size={15} className="arrow-shift" />}
         </button>
@@ -210,11 +218,12 @@ export function ContactForm({ options }: { options: ConsultationOptions }) {
 function FormSection({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
   return (
     <fieldset>
-      <legend className="mb-8 flex w-full items-baseline gap-4 border-b border-line pb-4">
-        <span className="font-serif text-sm text-gold-ink">{number}</span>
-        <span className="font-serif text-2xl text-navy">{title}</span>
+      <legend className="mb-7 flex w-full items-center gap-4">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy text-sm font-bold tabular-nums text-gold-light">{number}</span>
+        <span className="text-[1.5rem] font-bold tracking-[-0.025em] text-navy">{title}</span>
+        <span aria-hidden="true" className="ml-2 h-px flex-1 bg-line" />
       </legend>
-      <div className="grid gap-x-10 gap-y-9 md:grid-cols-2">{children}</div>
+      <div className="grid gap-x-6 gap-y-6 md:grid-cols-2">{children}</div>
     </fieldset>
   );
 }

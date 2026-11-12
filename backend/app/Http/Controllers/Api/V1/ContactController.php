@@ -65,7 +65,7 @@ class ContactController extends Controller
         }
 
         return response()->json([
-            'message' => 'Thank you — your inquiry has been received. Our team will be in touch shortly.',
+            'message' => 'Thank you. Your inquiry has been received. Our team will be in touch shortly.',
         ], 201);
     }
 }

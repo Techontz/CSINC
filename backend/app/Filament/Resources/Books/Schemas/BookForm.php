@@ -112,7 +112,7 @@ class BookForm
                         }
                     }),
                 Select::make('currency')
-                    ->options(['USD' => 'USD — US Dollar'])
+                    ->options(['USD' => 'USD (US Dollar)'])
                     ->default('USD')
                     ->selectablePlaceholder(false)
                     ->required(),

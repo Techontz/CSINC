@@ -20,7 +20,7 @@ export function AddToCartButton({ book }: { book: Book }) {
     return (
       <div className="flex flex-col gap-3 sm:flex-row">
         <Link href="/cart" className={buttonClasses("solid", "flex-1")}>
-          <span>{justAdded ? "Added — view cart" : "In your cart — checkout"}</span>
+          <span>{justAdded ? "Added: view cart" : "In your cart: checkout"}</span>
           <ArrowUpRight size={15} className="arrow-shift" />
         </Link>
         {justAdded && (
@@ -49,7 +49,7 @@ export function AddToCartButton({ book }: { book: Book }) {
         setJustAdded(true);
       }}
     >
-      <span>Add to cart — {book.price.formatted}</span>
+      <span>Add to cart · {book.price.formatted}</span>
     </button>
   );
 }

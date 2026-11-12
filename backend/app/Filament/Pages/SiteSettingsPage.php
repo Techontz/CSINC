@@ -121,7 +121,7 @@ class SiteSettingsPage extends Page
                                         ->label('Send new inquiries & orders to')
                                         ->email()
                                         ->required()
-                                        ->helperText('Private — never shown on the website.')
+                                        ->helperText('Private, never shown on the website.')
                                         ->columnSpanFull(),
                                 ]),
                             ]),
@@ -149,7 +149,7 @@ class SiteSettingsPage extends Page
                                 TextInput::make('seo.title_template')
                                     ->label('Title template')
                                     ->maxLength(80)
-                                    ->helperText('%s is replaced by the page title, e.g. “%s — CSinc91”.'),
+                                    ->helperText('%s is replaced by the page title, e.g. “%s | CSinc91”.'),
                                 Textarea::make('seo.default_description')->label('Default meta description')->rows(3)->maxLength(320),
                                 MediaPicker::make('seo.og_image_id', 'seo')->label('Default social sharing image')->helperText('1200×630 recommended.'),
                             ]),

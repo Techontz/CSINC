@@ -71,6 +71,21 @@ class PageApiTest extends TestCase
             ->assertJsonPath('data.blocks.0.data.slides.0.image.alt', 'Poster');
     }
 
+    public function test_service_text_placeholders_are_resolved(): void
+    {
+        Book::factory()->published()->count(4)->create();
+        Service::factory()->create(['group' => ServiceGroup::Healthcare, 'summary' => '{{products.count}} step-by-step startup blueprints']);
+
+        Page::factory()->create([
+            'slug' => 'healthcare',
+            'blocks' => [['type' => 'services', 'data' => ['layout' => 'grid', 'group' => 'healthcare', 'heading' => 'Services']]],
+        ]);
+
+        $this->getJson('/api/v1/pages/healthcare')
+            ->assertOk()
+            ->assertJsonPath('data.blocks.0.data.services.0.summary', '4 step-by-step startup blueprints');
+    }
+
     public function test_draft_page_is_not_found(): void
     {
         $page = Page::factory()->draft()->create();

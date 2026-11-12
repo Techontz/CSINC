@@ -1,7 +1,7 @@
 /**
  * The single source of the Laravel backend address.
  *
- * NEXT_PUBLIC_API_URL is the backend origin, e.g. https://api.agizastore.xyz.
+ * NEXT_PUBLIC_API_URL is the backend origin, e.g. https://api.csinc91.com.
  * API_URL (the full /api/v1 base) is still accepted for older deployments.
  * Outside production the local development backend is used as a fallback;
  * in production a missing value fails loudly instead of silently calling localhost.
@@ -16,14 +16,14 @@ function resolveBackendOrigin(): string {
   }
 
   if (process.env.NODE_ENV === "production") {
-    throw new Error("NEXT_PUBLIC_API_URL is not set. Point it at the Laravel backend, e.g. https://api.agizastore.xyz");
+    throw new Error("NEXT_PUBLIC_API_URL is not set. Point it at the Laravel backend, e.g. https://api.csinc91.com");
   }
 
   return LOCAL_BACKEND;
 }
 
-/** Backend origin, e.g. https://api.agizastore.xyz */
+/** Backend origin, e.g. https://api.csinc91.com */
 export const BACKEND_URL = resolveBackendOrigin();
 
-/** Versioned REST API base, e.g. https://api.agizastore.xyz/api/v1 */
+/** Versioned REST API base, e.g. https://api.csinc91.com/api/v1 */
 export const API_BASE_URL = `${BACKEND_URL}/api/v1`;

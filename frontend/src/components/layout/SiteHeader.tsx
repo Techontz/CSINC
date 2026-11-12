@@ -84,14 +84,13 @@ export function SiteHeader({ site }: { site: SiteData }) {
         )}
         onMouseLeave={scheduleClose}
       >
-        <div aria-hidden="true" className="h-[5px] bg-gradient-to-r from-navy-soft via-[#2f5d8a] to-gold" />
-        <div className={cn("bg-navy transition-shadow duration-300", (scrolled || openMenu) && "shadow-[0_1px_0_rgba(255,255,255,0.06)]")}>
-          <div className="container-site flex h-[4.1875rem] items-center justify-between gap-6 lg:h-[4.375rem]">
-            <Logo image={site.logo_inverse} inverse name={site.name} className="shrink-0" />
+        <div className={cn("border-b bg-white/95 backdrop-blur-md transition-[border-color,box-shadow] duration-300", scrolled || openMenu ? "border-line shadow-[0_8px_30px_-18px_rgba(0,28,53,0.35)]" : "border-transparent")}>
+          <div className="container-site flex h-[5rem] items-center justify-between gap-6 lg:h-[5.75rem]">
+            <Logo image={site.logo} name={site.name} className="shrink-0" />
 
             <div className="flex h-full items-center">
               <nav aria-label="Main" className="hidden h-full lg:block">
-                <ul className="flex h-full items-center">
+                <ul className="flex h-full items-center gap-1">
                   {items.map((item) => (
                     <NavItem
                       key={item.label}
@@ -108,7 +107,7 @@ export function SiteHeader({ site }: { site: SiteData }) {
               {contact && (
                 <Link
                   href={contact.url}
-                  className="group ml-3 hidden items-center gap-2.5 border border-white px-[0.9375rem] py-2.5 text-xs font-medium uppercase leading-none tracking-[1.5px] text-white transition-colors hover:bg-white hover:text-navy lg:inline-flex"
+                  className="group ml-5 hidden items-center gap-2 rounded-xl bg-navy px-5 py-3.5 text-base font-semibold leading-none text-white shadow-[0_10px_24px_-12px_rgba(0,41,76,0.7)] transition-colors hover:bg-gold lg:inline-flex"
                 >
                   {contact.label}
                   <ArrowUpRight size={14} strokeWidth={2.5} className="arrow-shift" />
@@ -123,31 +122,31 @@ export function SiteHeader({ site }: { site: SiteData }) {
                 aria-label={searchOpen ? "Close search" : "Search products"}
                 aria-expanded={searchOpen}
                 aria-controls="site-search"
-                className="ml-1 flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-gold-light lg:ml-2"
+                className="ml-1 flex h-12 w-12 items-center justify-center rounded-full text-navy transition-colors hover:bg-sky lg:ml-3"
               >
-                {searchOpen ? <Close size={20} /> : <Search size={20} />}
+                {searchOpen ? <Close size={22} /> : <Search size={22} />}
               </button>
               <Link
                 href="/cart"
-                className="relative flex h-11 w-11 items-center justify-center text-white transition-colors hover:text-gold-light"
+                className="relative flex h-12 w-12 items-center justify-center rounded-full text-navy transition-colors hover:bg-sky"
                 aria-label={`Cart${ready && count ? `, ${count} item${count > 1 ? "s" : ""}` : ""}`}
               >
-                <Bag />
+                <Bag size={22} />
                 {ready && count > 0 && (
-                  <span className="absolute right-1 top-1.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold text-navy-deep">
+                  <span className="absolute right-1 top-1.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-gold px-1 text-[10px] font-bold text-white">
                     {count}
                   </span>
                 )}
               </Link>
               <button
                 type="button"
-                className="flex h-11 w-11 items-center justify-center text-white lg:hidden"
+                className="flex h-12 w-12 items-center justify-center rounded-full text-navy hover:bg-sky lg:hidden"
                 aria-label="Open menu"
                 aria-expanded={mobileOpen}
                 aria-controls="mobile-nav"
                 onClick={() => setMobileOpen(true)}
               >
-                <Menu />
+                <Menu size={26} />
               </button>
             </div>
           </div>
@@ -181,9 +180,9 @@ export function SiteHeader({ site }: { site: SiteData }) {
               placeholder="Search startup guides, e.g. “home health”"
               autoFocus={searchOpen}
               key={searchOpen ? "open" : "closed"}
-              className="w-full border-0 bg-transparent font-serif text-2xl text-navy placeholder:text-navy/35 focus:outline-none focus:ring-0 md:text-[2.5rem]"
+              className="w-full border-0 bg-transparent text-2xl font-semibold tracking-[-0.02em] text-navy placeholder:text-navy/35 focus:outline-none focus:ring-0 md:text-[2.5rem]"
             />
-            <button type="submit" className="hidden shrink-0 items-center gap-2 border border-navy px-5 py-3 text-xs font-bold uppercase tracking-[1.5px] text-navy transition-colors hover:bg-navy hover:text-white sm:inline-flex">
+            <button type="submit" className="hidden shrink-0 items-center gap-2 rounded-xl bg-navy px-5 py-3 text-[0.9375rem] font-semibold text-white transition-colors hover:bg-navy-deep sm:inline-flex">
               Search <ArrowUpRight size={14} strokeWidth={2.5} />
             </button>
           </form>
@@ -198,11 +197,11 @@ export function SiteHeader({ site }: { site: SiteData }) {
           onMouseEnter={() => active && open(active.label)}
         >
           {active && (
-            <div className="container-site grid grid-cols-12 gap-10 py-14" id={`mega-${active.label}`}>
+            <div className="container-site grid grid-cols-12 gap-10 py-16" id={`mega-${active.label}`}>
               <div className="col-span-4 border-r border-line pr-10">
-                <p className="eyebrow text-gold-ink">{active.label}</p>
-                <p className="mt-5 font-serif text-[1.75rem] leading-tight text-navy">{active.description}</p>
-                <Link href={active.url} className="group mt-8 inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-navy">
+                <p className="tag-pill">{active.label}</p>
+                <p className="mt-5 font-serif text-[1.75rem] leading-tight tracking-[-0.025em] text-navy">{active.description}</p>
+                <Link href={active.url} className="group mt-8 inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-navy">
                   <span className="link-underline pb-0.5">Explore {active.label.toLowerCase()}</span>
                   <ArrowUpRight size={14} className="arrow-shift text-gold" />
                 </Link>
@@ -210,7 +209,7 @@ export function SiteHeader({ site }: { site: SiteData }) {
               <ul className="col-span-8 grid grid-cols-2 gap-x-10 gap-y-2">
                 {active.children.map((child) => (
                   <li key={child.url}>
-                    <SmartLink href={child.url} newTab={child.new_tab} className="group flex items-start justify-between gap-6 border-b border-line py-5">
+                    <SmartLink href={child.url} newTab={child.new_tab} className="group -mx-4 flex items-start justify-between gap-6 rounded-2xl px-4 py-4 transition-colors hover:bg-sky">
                       <span>
                         <span className="block text-[1.05rem] font-medium text-navy transition-colors group-hover:text-gold-ink">{child.label}</span>
                         {child.description && <span className="mt-1.5 block text-sm leading-relaxed text-muted">{child.description}</span>}
@@ -258,16 +257,16 @@ function NavItem({
 }) {
   const hasChildren = item.children.length > 0;
   const label = (
-    <span className={cn("relative py-1", active && "after:absolute after:inset-x-0 after:-bottom-1 after:h-[2px] after:bg-gold-light")}>{item.label}</span>
+    <span className={cn("relative py-1", active && "after:absolute after:inset-x-0 after:-bottom-1 after:h-[2px] after:rounded-full after:bg-gold")}>{item.label}</span>
   );
-  const base = "flex h-full items-center pl-[0.875rem] pr-1 pt-[2px] text-sm font-medium uppercase leading-none tracking-[1.5px] transition-colors";
+  const base = "flex h-full items-center pl-4 pr-1 text-[1.0625rem] font-semibold leading-none tracking-[-0.01em] transition-colors";
 
   return (
     <li className="flex h-full items-center" onMouseEnter={hasChildren ? onOpen : undefined}>
       <SmartLink
         href={item.url}
         newTab={item.new_tab}
-        className={cn(base, expanded || active ? "text-gold-light" : "text-white hover:text-gold-light")}
+        className={cn(base, expanded || active ? "text-gold-ink" : "text-navy hover:text-gold-ink")}
       >
         {label}
       </SmartLink>
@@ -278,9 +277,9 @@ function NavItem({
           aria-expanded={expanded}
           aria-controls={`mega-${item.label}`}
           aria-label={`Show ${item.label} menu`}
-          className={cn("mr-2 flex h-8 w-6 items-center justify-center text-white transition-transform hover:text-gold-light", expanded && "rotate-180 text-gold-light")}
+          className={cn("mr-1 flex h-8 w-6 items-center justify-center text-navy transition-transform hover:text-gold-ink", expanded && "rotate-180 text-gold-ink")}
         >
-          <ChevronDown size={13} strokeWidth={2.25} />
+          <ChevronDown size={15} strokeWidth={2.25} />
         </button>
       )}
     </li>

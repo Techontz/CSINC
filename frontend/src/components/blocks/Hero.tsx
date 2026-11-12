@@ -70,19 +70,17 @@ export function Hero({ data, breadcrumbs, isFirst = true }: Props) {
             </Reveal>
             <HeroActions data={data} tone="dark" immediate={isFirst} />
           </div>
-          <div className="relative overflow-hidden bg-navy lg:col-span-7">
+          <div className="relative overflow-hidden bg-navy lg:col-span-7 lg:my-6 lg:mr-6 lg:rounded-[2rem]">
             <div className="absolute inset-0">
               <CmsImage image={data.image} sizes="24px" className="scale-110" quality={40} />
               <div className="absolute inset-0 bg-navy/30" />
             </div>
             <div className="relative px-[clamp(1.5625rem,6vw,5.5rem)] py-10 sm:py-14 lg:py-[3.25rem]">
-              <Reveal variant="mask" immediate={isFirst} className="relative aspect-[16/10]">
+              <Reveal variant="mask" immediate={isFirst} className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]">
                 <div className="reveal-scale absolute inset-0">
                   <CmsImage image={data.image} sizes="(min-width: 1024px) 45vw, 90vw" preload={isFirst} />
                 </div>
               </Reveal>
-              <span aria-hidden="true" className="absolute right-[clamp(0.75rem,4vw,3.75rem)] top-[clamp(1.25rem,3vw,2rem)] h-1/3 w-1/4 border-r-[6px] border-t-[6px] border-gold-light" />
-              <span aria-hidden="true" className="absolute bottom-[clamp(1.25rem,3vw,2rem)] left-[clamp(0.75rem,4vw,3.75rem)] h-1/3 w-1/4 border-b-[6px] border-l-[6px] border-gold-light" />
             </div>
           </div>
         </div>

@@ -124,7 +124,7 @@ export function CatalogView({ eyebrow, heading, intro, categories, activeCategor
           {books.data.length > 0 ? (
             <BookGrid books={books.data} />
           ) : (
-            <div className="flex flex-col items-start border border-line bg-paper p-10 md:p-16">
+            <div className="flex flex-col items-start border border-line rounded-[1.5rem] bg-paper p-10 md:p-16">
               <p className="font-serif text-h3 text-navy">We couldn’t find a match.</p>
               <p className="mt-4 max-w-lg text-muted">Try a different keyword, browse all products, or tell us what you are looking for and we will point you to the right resource.</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">

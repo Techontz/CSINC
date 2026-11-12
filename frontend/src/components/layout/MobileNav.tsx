@@ -43,7 +43,7 @@ export function MobileNav({ site, open, onClose }: { site: SiteData; open: boole
         open ? "visible opacity-100" : "invisible opacity-0",
       )}
     >
-      <div className="container-site flex h-[4.5rem] shrink-0 items-center justify-between">
+      <div className="container-site flex h-[5rem] shrink-0 items-center justify-between">
         <Logo image={site.logo_inverse} inverse name={site.name} />
         <button ref={closeButton} type="button" onClick={onClose} className="flex h-11 w-11 items-center justify-center" aria-label="Close menu">
           <Close />

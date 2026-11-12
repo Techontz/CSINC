@@ -32,7 +32,7 @@ class OrderReceipt extends Notification
         $order = $this->order->loadMissing('items');
 
         $mail = (new MailMessage)
-            ->subject('Your CSinc91 downloads — order '.$order->number)
+            ->subject('Your CSinc91 downloads: order '.$order->number)
             ->greeting('Thank you, '.e($order->customer_name).'.')
             ->line('Your payment of '.Money::format($order->total_cents, $order->currency).' was received. Your resources are ready to download:');
 
@@ -43,6 +43,6 @@ class OrderReceipt extends Notification
         return $mail
             ->line('Download links expire for your security. You can always get fresh links from your order page:')
             ->action('View your order', $fulfillment->orderUrl($order))
-            ->line('Practitioner support is available — simply reply to this email.');
+            ->line('Practitioner support is available. Simply reply to this email.');
     }
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { BookCover } from "@/components/books/BookCover";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { OrderStatusWatcher } from "@/components/cart/OrderStatusWatcher";
@@ -37,15 +37,15 @@ export default async function OrderPage({ params, searchParams }: Props) {
         </h1>
         <p className="mt-6 max-w-2xl text-lead text-muted">
           {paid && <>Your payment of {order.total} was received. Your guides are ready below, and a copy of these links has been emailed to {order.customer_email}.</>}
-          {pending && "This usually takes a few seconds. This page refreshes automatically — please keep it open."}
+          {pending && "This usually takes a few seconds. This page refreshes automatically, so please keep it open."}
           {!paid && !pending && "This order is not eligible for downloads. If you believe this is a mistake, please contact our support team."}
         </p>
 
         <ul className="mt-14 divide-y divide-line border-y border-line bg-white">
           {order.items.map((item) => (
             <li key={item.title} className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center">
-              <div className="relative h-24 w-16 shrink-0 overflow-hidden bg-mist">
-                {item.cover && <Image src={item.cover} alt="" fill sizes="64px" className="object-cover" />}
+              <div className="w-[4.5rem] shrink-0 overflow-hidden rounded-md shadow-[0_8px_18px_-8px_rgba(0,28,53,0.5)]">
+                <BookCover title={item.title} variant="flat" />
               </div>
               <div className="flex-1">
                 <p className="font-serif text-xl text-navy">{item.title}</p>
@@ -56,7 +56,7 @@ export default async function OrderPage({ params, searchParams }: Props) {
                   <Download size={16} /> Download PDF
                 </a>
               ) : paid ? (
-                <span className="text-sm text-muted">File being prepared — we will email you.</span>
+                <span className="text-sm text-muted">File being prepared. We will email you.</span>
               ) : null}
             </li>
           ))}

@@ -69,7 +69,7 @@ describe("AddToCartButton", () => {
   it("adds the product and switches to a checkout link", async () => {
     render(<AddToCartButton book={book} />, { wrapper });
 
-    await userEvent.click(await screen.findByRole("button", { name: /add to cart — \$997\.00/i }));
+    await userEvent.click(await screen.findByRole("button", { name: /add to cart · \$997\.00/i }));
 
     expect(screen.getByRole("link", { name: /view cart/i })).toHaveAttribute("href", "/cart");
     expect(screen.getByRole("status")).toHaveTextContent("Added to cart");

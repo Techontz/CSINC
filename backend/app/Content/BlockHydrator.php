@@ -157,7 +157,25 @@ class BlockHydrator
             $query->where('group', $group);
         }
 
-        return ServiceResource::collection($query->get())->resolve($this->request);
+        return $this->replaceTokensDeep(ServiceResource::collection($query->get())->resolve($this->request));
+    }
+
+    /**
+     * Resolves {{placeholders}} in every string of already-serialized data
+     * (e.g. a service summary that mentions the product count).
+     *
+     * @param  array<array-key, mixed>  $data
+     * @return array<array-key, mixed>
+     */
+    private function replaceTokensDeep(array $data): array
+    {
+        array_walk_recursive($data, function (mixed &$value): void {
+            if (is_string($value)) {
+                $value = $this->replaceTokens($value);
+            }
+        });
+
+        return $data;
     }
 
     /**

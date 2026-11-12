@@ -67,7 +67,7 @@ class AdminApiTest extends TestCase
         // Create a draft with a cover and downloadable file.
         $id = $this->post('/api/v1/admin/books', [
             'title' => 'Medical Courier Startup',
-            'short_description' => 'Step-by-step startup guide — medical courier logistics.',
+            'short_description' => 'Step-by-step startup guide for medical courier logistics.',
             'price_cents' => 9700,
             'category_ids' => [$category->id],
             'tags' => ['Logistics', 'Healthcare'],
@@ -93,7 +93,7 @@ class AdminApiTest extends TestCase
             ->assertOk()
             ->assertJsonPath('data.is_purchasable', true)
             ->assertJsonPath('data.seo.title', 'Medical Courier Startup')
-            ->assertJsonPath('data.seo.description', 'Step-by-step startup guide — medical courier logistics.');
+            ->assertJsonPath('data.seo.description', 'Step-by-step startup guide for medical courier logistics.');
 
         // Edit → public site reflects changes.
         $this->patchJson("/api/v1/admin/books/{$id}", ['title' => 'Medical Courier Business Startup', 'seo_title' => 'Start a Medical Courier Business'])->assertOk();

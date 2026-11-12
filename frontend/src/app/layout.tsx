@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Inter } from "next/font/google";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -10,13 +10,6 @@ import { SITE_URL } from "@/lib/site-url";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-newsreader",
-  style: ["normal", "italic"],
-  weight: ["400", "500"],
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   themeColor: "#00294c",
@@ -47,7 +40,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const site = await getSite();
 
   return (
-    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body>
         <a href="#main" className="sr-only z-[100] bg-gold px-4 py-3 font-semibold text-navy-deep focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
           Skip to content
@@ -55,7 +48,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <JsonLd data={organizationSchema(site)} />
         <CartProvider>
           <SiteHeader site={site} />
-          <main id="main" className="min-h-[60vh] pt-[4.5rem] lg:pt-[4.6875rem]">
+          <main id="main" className="min-h-[60vh] pt-[5rem] lg:pt-[5.75rem]">
             {children}
           </main>
           <SiteFooter site={site} />

@@ -13,7 +13,7 @@
                         <span @class(['truncate text-sm text-slate-800', 'font-semibold' => $message->status === \App\Enums\MessageStatus::New])>{{ $message->full_name }}</span>
                         <span class="shrink-0 text-xs text-slate-400">{{ $message->created_at->diffForHumans(short: true) }}</span>
                     </span>
-                    <span class="block truncate text-xs text-slate-500">{{ $message->subject }} — {{ \Illuminate\Support\Str::limit($message->message, 60) }}</span>
+                    <span class="block truncate text-xs text-slate-500">{{ $message->subject }}: {{ \Illuminate\Support\Str::limit($message->message, 60) }}</span>
                 </span>
                 <x-filament::badge :color="$message->status->getColor()" size="sm">{{ $message->status->getLabel() }}</x-filament::badge>
             </a>

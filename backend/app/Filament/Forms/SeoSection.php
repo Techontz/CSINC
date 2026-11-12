@@ -48,7 +48,7 @@ class SeoSection
 
                 return new HtmlString(
                     '<div class="csi-serp"><div class="csi-serp-url">'.e($url).'</div>'
-                    .'<div class="csi-serp-title">'.e(str($title)->limit(65)).' — CSinc91</div>'
+                    .'<div class="csi-serp-title">'.e(str($title)->limit(65)).' | CSinc91</div>'
                     .'<div class="csi-serp-desc">'.e(str(strip_tags((string) $description))->limit(160)).'</div></div>'
                 );
             });

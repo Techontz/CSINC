@@ -42,7 +42,7 @@ class ListMedia extends ListRecords
                         ->storeFileNamesIn('original_names')
                         ->panelLayout('grid')
                         ->required()
-                        ->helperText('JPG, PNG, WebP, AVIF, GIF, MP4, WebM or PDF — up to 50 MB.'),
+                        ->helperText('JPG, PNG, WebP, AVIF, GIF, MP4, WebM or PDF, up to 50 MB.'),
                 ])
                 ->action(function (array $data): void {
                     $uploader = app(MediaUploader::class);

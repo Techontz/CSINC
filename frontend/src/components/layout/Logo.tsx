@@ -19,13 +19,13 @@ export function Logo({ image, inverse = false, name, className, variant = "wordm
   const isSvg = src.endsWith(".svg");
 
   return (
-    <Link href="/" aria-label={`${name} — home`} className={cn("inline-flex", className)}>
+    <Link href="/" aria-label={`${name} home`} className={cn("inline-flex", className)}>
       <Image
         src={src}
         alt={name}
         width={variant === "full" ? 553 : (image?.width ?? 356)}
         height={image?.height && variant !== "full" ? image.height : 96}
-        className={variant === "full" ? "h-11 w-auto md:h-12" : "h-[30px] w-auto lg:h-[36px]"}
+        className={variant === "full" ? "h-11 w-auto md:h-12" : "h-[38px] w-auto lg:h-[48px]"}
         preload
         unoptimized={isSvg}
       />

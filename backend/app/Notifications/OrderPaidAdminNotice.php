@@ -28,7 +28,7 @@ class OrderPaidAdminNotice extends Notification implements ShouldQueue
         $order = $this->order->loadMissing('items');
 
         return (new MailMessage)
-            ->subject('New order '.$order->number.' — '.Money::format($order->total_cents, $order->currency))
+            ->subject('New order '.$order->number.': '.Money::format($order->total_cents, $order->currency))
             ->line('Customer: '.e($order->customer_name).' <'.e($order->customer_email).'>')
             ->line('Items: '.e($order->items->pluck('title')->implode(', ')))
             ->action('Open order', url('/admin/orders/'.$order->getKey()));

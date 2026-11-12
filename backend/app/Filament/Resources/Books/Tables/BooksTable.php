@@ -69,7 +69,7 @@ class BooksTable
                     ->placeholder('Free'),
                 IconColumn::make('file_path')
                     ->label('File')
-                    ->tooltip(fn (Book $record): string => $record->file_path ? 'Download file attached' : 'No download file — cannot be purchased')
+                    ->tooltip(fn (Book $record): string => $record->file_path ? 'Download file attached' : 'No download file, so it cannot be purchased')
                     ->state(fn (Book $record): bool => filled($record->file_path))
                     ->boolean()
                     ->trueIcon('heroicon-o-document-check')

@@ -28,7 +28,7 @@ class ContactMessageReceived extends Notification implements ShouldQueue
         $message = $this->contactMessage;
 
         $mail = (new MailMessage)
-            ->subject('New consultation inquiry — '.$message->full_name)
+            ->subject('New consultation inquiry: '.$message->full_name)
             ->replyTo($message->email, $message->full_name)
             ->greeting('New inquiry received')
             ->line('**Name:** '.e($message->full_name))

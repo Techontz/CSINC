@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { BookCover } from "@/components/books/BookCover";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useState, type FormEvent } from "react";
@@ -33,7 +33,7 @@ function CartContent({ checkoutEnabled, checkoutNote, legalLinks, supportEmail }
 
   if (items.length === 0) {
     return (
-      <div className="mt-12 border border-line bg-paper p-10 md:p-16">
+      <div className="mt-12 border border-line rounded-[1.5rem] bg-paper p-10 md:p-16">
         <p className="font-serif text-h3 text-navy">Your cart is empty.</p>
         <p className="mt-4 max-w-lg text-muted">Browse step-by-step startup blueprints for healthcare, residential care and general business.</p>
         <Link href="/products" className={buttonClasses("solid", "mt-8")}>
@@ -92,15 +92,15 @@ function CartContent({ checkoutEnabled, checkoutNote, legalLinks, supportEmail }
     <div className="mt-12 grid gap-14 lg:grid-cols-12">
       <div className="lg:col-span-7">
         {cancelled && (
-          <p role="status" className="mb-8 border-l-2 border-gold bg-paper px-5 py-4 text-sm text-navy">
-            Checkout was cancelled — your cart has been saved.
+          <p role="status" className="mb-8 rounded-xl border-l-4 border-gold bg-paper px-5 py-4 text-sm text-navy">
+            Checkout was cancelled. Your cart has been saved.
           </p>
         )}
         <ul className="divide-y divide-line border-y border-line">
           {items.map((item) => (
             <li key={item.slug} className="flex items-center gap-5 py-6">
-              <Link href={`/products/${item.slug}`} className="relative h-24 w-16 shrink-0 overflow-hidden bg-paper">
-                {item.cover && <Image src={item.cover} alt="" fill sizes="64px" className="object-cover" />}
+              <Link href={`/products/${item.slug}`} aria-hidden="true" tabIndex={-1} className="w-[4.5rem] shrink-0 overflow-hidden rounded-md shadow-[0_8px_18px_-8px_rgba(0,28,53,0.5)]">
+                <BookCover title={item.title} variant="flat" />
               </Link>
               <div className="min-w-0 flex-1">
                 <Link href={`/products/${item.slug}`} className="font-serif text-xl leading-snug text-navy hover:text-gold">{item.title}</Link>
@@ -128,7 +128,7 @@ function CartContent({ checkoutEnabled, checkoutNote, legalLinks, supportEmail }
       </div>
 
       <div className="lg:col-span-5">
-        <div className="bg-paper p-8 md:p-10 lg:sticky lg:top-[6.5rem]">
+        <div className="rounded-[1.5rem] bg-paper p-8 md:p-10 lg:sticky lg:top-[7.5rem]">
           <h2 className="font-serif text-h3 text-navy">Checkout</h2>
           {checkoutEnabled ? (
             <form onSubmit={onSubmit} noValidate className="mt-8 space-y-8">

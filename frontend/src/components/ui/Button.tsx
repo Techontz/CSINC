@@ -6,16 +6,16 @@ import { SmartLink } from "./SmartLink";
 type Variant = "solid" | "outline" | "light" | "outline-light" | "gold";
 
 const variants: Record<Variant, string> = {
-  solid: "bg-navy text-white hover:bg-navy-deep",
-  outline: "border border-gold text-navy hover:bg-navy hover:border-navy hover:text-white",
+  solid: "bg-navy text-white shadow-[0_8px_20px_-10px_rgba(0,41,76,0.6)] hover:bg-navy-deep",
+  outline: "border border-navy/20 bg-white text-navy hover:border-navy hover:bg-navy hover:text-white",
   light: "bg-white text-navy hover:bg-gold-light",
-  "outline-light": "border border-white/35 text-white hover:border-white hover:bg-white hover:text-navy",
-  gold: "bg-gold text-navy-deep hover:bg-gold-light",
+  "outline-light": "border border-white/40 text-white hover:border-white hover:bg-white hover:text-navy",
+  gold: "bg-gold text-white shadow-[0_8px_20px_-10px_rgba(185,133,44,0.8)] hover:bg-gold-ink",
 };
 
 export const buttonClasses = (variant: Variant = "solid", className?: string) =>
   cn(
-    "group inline-flex min-h-[2.875rem] items-center justify-center gap-3 px-[1.125rem] py-3 text-sm font-bold uppercase tracking-[0.1em] transition-colors duration-300",
+    "group inline-flex min-h-[3rem] items-center justify-center gap-2.5 rounded-xl px-5 py-3 text-[0.9375rem] font-semibold tracking-[-0.005em] transition-[background-color,border-color,color,transform] duration-300 active:scale-[0.98]",
     "disabled:cursor-not-allowed disabled:opacity-50",
     variants[variant],
     className,
@@ -58,7 +58,7 @@ export function ArrowLink({
     <SmartLink
       href={href}
       className={cn(
-        "group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.1em]",
+        "group inline-flex items-center gap-2 text-[0.9375rem] font-semibold",
         tone === "dark" ? "text-navy" : "text-white",
         className,
       )}

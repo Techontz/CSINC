@@ -116,7 +116,7 @@ export function HeroSlider({ data }: { data: BlockMap["hero_slider"] }) {
     <section
       aria-roledescription="carousel"
       aria-label="Highlights"
-      className="relative isolate h-[min(43.75rem,calc(100svh-4.5rem))] lg:h-[min(43.75rem,calc(100svh-4.6875rem))] min-h-[34rem] overflow-hidden bg-navy-deep text-white"
+      className="relative isolate h-[min(46rem,calc(100svh-5rem))] lg:h-[min(46rem,calc(100svh-5.75rem))] min-h-[34rem] overflow-hidden bg-navy-deep text-white"
       onKeyDown={(event) => {
         if (event.key === "ArrowRight") goTo(active + 1);
         if (event.key === "ArrowLeft") goTo(active - 1);
@@ -160,11 +160,11 @@ export function HeroSlider({ data }: { data: BlockMap["hero_slider"] }) {
               aria-current={index === active}
               className="group relative h-6 w-10 sm:w-[3.75rem]"
             >
-              <span className="absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2 bg-white/35 transition-colors group-hover:bg-white/60" />
+              <span className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-white/30 transition-colors group-hover:bg-white/55" />
               <span
                 key={index === active ? `${active}-${paused}` : undefined}
                 className={cn(
-                  "absolute left-0 top-1/2 h-[3px] -translate-y-1/2 bg-white",
+                  "absolute left-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-white",
                   index === active ? (autoplay ? "hero-progress" : "w-full") : "w-0",
                 )}
                 style={index === active && autoplay ? { animationDuration: `${interval}ms` } : undefined}
@@ -175,7 +175,7 @@ export function HeroSlider({ data }: { data: BlockMap["hero_slider"] }) {
             type="button"
             onClick={() => setPaused((value) => !value)}
             aria-label={paused ? "Play slideshow" : "Pause slideshow"}
-            className="ml-2 flex h-[1.375rem] w-[1.375rem] items-center justify-center rounded-full border border-white/80 text-white transition-colors hover:bg-white hover:text-navy"
+            className="ml-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/60 text-white transition-colors hover:bg-white hover:text-navy"
           >
             {paused ? (
               <svg width="8" height="9" viewBox="0 0 8 9" fill="currentColor" aria-hidden="true"><path d="M0 0l8 4.5L0 9z" /></svg>
@@ -249,24 +249,25 @@ function SlideContent({ slide, visible, isFirst, position, total }: { slide: Her
       aria-label={`${position} of ${total}`}
       aria-hidden={!visible}
       className={cn(
-        "max-w-[40rem] transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+        "max-w-[46rem] transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
         visible ? "relative translate-y-0 opacity-100 delay-300" : "pointer-events-none absolute translate-y-4 opacity-0",
       )}
     >
-      <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-light md:text-[0.8125rem]">
-        <span className="tabular-nums">{String(position).padStart(2, "0")}</span>
-        <span aria-hidden="true" className="h-px w-8 bg-gold-light/70" />
-        <span>{slide.eyebrow ?? `${position} of ${total}`}</span>
+      <p className="mb-6">
+        <span className="tag-pill-light">
+          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold-light" />
+          {slide.eyebrow ?? `${position} of ${total}`}
+        </span>
       </p>
-      <Heading className="font-serif text-[clamp(1.875rem,1.3rem+2.6vw,3.75rem)] text-balance [overflow-wrap:anywhere] font-medium leading-[1.08] tracking-[-0.01em] [&_em]:text-gold-light">
+      <Heading className="text-[clamp(2.25rem,1.4rem+3.6vw,4.75rem)] text-balance [overflow-wrap:anywhere] font-bold leading-[1.02] tracking-[-0.035em] [&_em]:text-gold-light">
         <Accent text={slide.heading} />
       </Heading>
-      {slide.body && <p className="mt-5 max-w-[32rem] text-pretty text-[1.0625rem] font-light leading-relaxed text-white/85 md:text-[1.1875rem]">{slide.body}</p>}
+      {slide.body && <p className="mt-6 max-w-[34rem] text-pretty text-[1.0625rem] leading-relaxed text-white/85 md:text-[1.25rem]">{slide.body}</p>}
       {slide.link_url && slide.link_label && (
         <SmartLink
           href={slide.link_url}
           tabIndex={visible ? 0 : -1}
-          className="group mt-8 inline-flex items-center gap-3 border border-gold-light px-[0.8125rem] py-[0.8125rem] text-sm font-bold uppercase tracking-[0.1em] text-gold-light transition-colors hover:bg-gold-light hover:text-navy-deep"
+          className="group mt-9 inline-flex min-h-[3.25rem] items-center gap-2.5 rounded-xl bg-gold px-6 text-base font-semibold text-white shadow-[0_10px_30px_-10px_rgba(185,133,44,0.9)] transition-colors hover:bg-white hover:text-navy"
         >
           {slide.link_label}
           <ArrowUpRight size={16} strokeWidth={2.25} className="arrow-shift" />

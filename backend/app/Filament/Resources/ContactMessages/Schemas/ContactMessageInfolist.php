@@ -53,23 +53,23 @@ class ContactMessageInfolist
                         ->schema([
                             TextEntry::make('full_name')->label('Name')->weight('medium'),
                             TextEntry::make('email')->copyable()->url(fn (ContactMessage $record): string => 'mailto:'.$record->email),
-                            TextEntry::make('phone')->placeholder('—')->url(fn (ContactMessage $record): ?string => $record->phone ? 'tel:'.preg_replace('/[^0-9+]/', '', $record->phone) : null),
-                            TextEntry::make('company')->placeholder('—'),
+                            TextEntry::make('phone')->placeholder('-')->url(fn (ContactMessage $record): ?string => $record->phone ? 'tel:'.preg_replace('/[^0-9+]/', '', $record->phone) : null),
+                            TextEntry::make('company')->placeholder('-'),
                         ]),
                     Section::make('Status')
                         ->icon('heroicon-o-flag')
                         ->schema([
                             TextEntry::make('status')->badge(),
-                            TextEntry::make('handler.name')->label('Handled by')->placeholder('—'),
-                            TextEntry::make('replied_at')->label('Replied')->dateTime('M j, Y g:i a')->placeholder('—'),
+                            TextEntry::make('handler.name')->label('Handled by')->placeholder('-'),
+                            TextEntry::make('replied_at')->label('Replied')->dateTime('M j, Y g:i a')->placeholder('-'),
                             TextEntry::make('source')->formatStateUsing(fn (string $state): string => ucfirst($state).' form'),
                         ]),
                     Section::make('Technical')
                         ->collapsed()
                         ->collapsible()
                         ->schema([
-                            TextEntry::make('ip_address')->label('IP address')->placeholder('—'),
-                            TextEntry::make('user_agent')->label('Browser')->placeholder('—')->size('xs'),
+                            TextEntry::make('ip_address')->label('IP address')->placeholder('-'),
+                            TextEntry::make('user_agent')->label('Browser')->placeholder('-')->size('xs'),
                         ]),
                 ])->columnSpan(['lg' => 1]),
             ]);

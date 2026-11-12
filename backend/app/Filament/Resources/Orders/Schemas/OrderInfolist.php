@@ -49,12 +49,12 @@ class OrderInfolist
                         ->schema([
                             TextEntry::make('status')->badge(),
                             TextEntry::make('created_at')->label('Placed')->dateTime('M j, Y g:i a'),
-                            TextEntry::make('paid_at')->label('Paid')->dateTime('M j, Y g:i a')->placeholder('—'),
-                            TextEntry::make('fulfilled_at')->label('Downloads emailed')->dateTime('M j, Y g:i a')->placeholder('—'),
-                            TextEntry::make('terms_accepted_at')->label('Terms accepted')->dateTime('M j, Y g:i a')->placeholder('—'),
+                            TextEntry::make('paid_at')->label('Paid')->dateTime('M j, Y g:i a')->placeholder('-'),
+                            TextEntry::make('fulfilled_at')->label('Downloads emailed')->dateTime('M j, Y g:i a')->placeholder('-'),
+                            TextEntry::make('terms_accepted_at')->label('Terms accepted')->dateTime('M j, Y g:i a')->placeholder('-'),
                             TextEntry::make('stripe_payment_intent')
                                 ->label('Stripe payment')
-                                ->placeholder('—')
+                                ->placeholder('-')
                                 ->copyable()
                                 ->url(fn (Order $record): ?string => $record->stripe_payment_intent ? 'https://dashboard.stripe.com/payments/'.$record->stripe_payment_intent : null, shouldOpenInNewTab: true),
                         ]),
