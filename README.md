@@ -74,17 +74,7 @@ Frontend: `frontend/.env.production` (committed, public values only) sets `NEXT_
 Both parts run on the GoDaddy cPanel plan:
 
 - **Backend** at `https://api.csinc91.com`: a cPanel subdomain whose document root is `csinc-api/public`, PHP 8.4, MySQL, and two cron jobs (`schedule:run` and `queue:work --stop-when-empty`).
-- **Website** at `https://csinc91.com`: a cPanel *Setup Node.js App* (Node 20.9 or newer) running the standalone build. Build it locally, never on the shared host:
-
-  ```bash
-  cd frontend
-  NEXT_PUBLIC_API_URL=https://api.csinc91.com NEXT_PUBLIC_SITE_URL=https://csinc91.com npm run build
-  cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/
-  # Linux image library for next/image on the server:
-  (cd .next/standalone && npm install --no-save --os=linux --cpu=x64 --libc=glibc sharp)
-  ```
-
-  Upload `.next/standalone` as the app root, set the startup file to `server.js`, and set `REVALIDATE_SECRET` (same value as the backend's `FRONTEND_REVALIDATE_SECRET`) and `NODE_ENV=production` in the app's environment variables. Run one app instance so cache refreshes from the CMS reach every page.
+- **Website** at `https://csinc91.com`: GoDaddy *Node.js Hosting* app synced to this repository's `main` branch. The root `package.json` builds and starts `frontend/` (`npm run build`, `npm start`; the platform supplies `PORT`). Public values come from `frontend/.env.production`; add `REVALIDATE_SECRET` (same value as the backend's `FRONTEND_REVALIDATE_SECRET`) under the app's *Settings → Secrets*. After pushing, use *Update Preview*, check it, then *Publish to Live*.
 
 ## Content the client still needs to supply
 

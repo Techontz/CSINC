@@ -1,0 +1,12 @@
+{
+  "name": "csinc91",
+  "private": true,
+  "description": "Root entry point for GoDaddy Node.js Hosting, which builds from the repository root. The website lives in frontend/, the Laravel backend in backend/.",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "build": "npm ci --include=dev --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix frontend"
+  }
+}
